@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from "react-dom";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -12,13 +12,13 @@ import REC from './components/Retail-Earnings-Calculator';
 
 const rootElement = document.getElementById("root");
 render(
-  <BrowserRouter basename='/website'>
+  <HashRouter basename='/website'>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="retail-earnings-calculator" element={<REC/>}/>
       <Route path="rec" element={<REC/>}/>
       <Route path="*" element={<NotFound/>}/>
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
   rootElement
 );
