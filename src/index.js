@@ -11,7 +11,7 @@ import NotFound from './components/NotFound'
 
 const rootElement = document.getElementById("root");
 render(
-  <HashRouter basename={process.env.PUBLIC_URL}>
+  <HashRouter basename="/">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path='*' element={<NotFound/>} />
