@@ -13,7 +13,7 @@ import REC from './components/Retail-Earnings-Calculator';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route exact path="retail-earnings-calculator" element={<REC/>}/>
