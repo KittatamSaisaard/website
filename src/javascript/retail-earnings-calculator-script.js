@@ -14,13 +14,13 @@ function dayToggle(button, index){
 
 function isNumberKey(evt){
     var charCode = (evt.which) ? evt.which : evt.keyCode
-    if (charCode > 31 && (charCode != 46 &&(charCode < 48 || charCode > 57)))
+    if (charCode > 31 && (charCode !== 46 &&(charCode < 48 || charCode > 57)))
         return false;
     return true;
 }
 
 function validRate(input){
-	if (input.value == "") {
+	if (input.value === "") {
 		input.value = 0;
 	}
 	calculatePayAndHours();
@@ -46,7 +46,7 @@ function timeDifference(start, end) {
        hours = hours + 24;
 
     // return (hours <= 9 ? "0" : "") + hours + "." + (minutes <= 9 ? "0" : "") + minutes;
-    return hours + (minutes != 0 ? "." + minutes : "") + (hours <= 1 && minutes == 0? " hour" : " hours");
+    return hours + (minutes !== 0 ? "." + minutes : "") + (hours <= 1 && minutes === 0? " hour" : " hours");
 }
 
 function calculateTax(income) {
@@ -73,8 +73,8 @@ function calculateTax(income) {
 }
 
 function calculateTime(inTime, outTime, breakTime) {
-	inTimeSplit = inTime.split(":");
-	outTimeSplit = outTime.split(":");
+	let inTimeSplit = inTime.split(":");
+	let outTimeSplit = outTime.split(":");
     let inDate = new Date(0, 0, 0, inTimeSplit[0], inTimeSplit[1], 0);
     let outDate = new Date(0, 0, 0, outTimeSplit[0], outTimeSplit[1], 0);
 	let sixPM = new Date(0, 0, 0, 18, 0, 0);
@@ -158,11 +158,11 @@ function calculatePayAndHours() {
 		document.getElementsByClassName("totalHours")[i].innerHTML = totalTime + (totalTime <= 1 ? " hour" : " hours");
 		var payRate = 0;
 		//Saturday
-		if (i == 5) {
+		if (i === 5) {
 			payRate = document.getElementById("saturday").value;
 		} else 
 		//Sunday
-		if (i == 6) {
+		if (i === 6) {
 			payRate = document.getElementById("sunday").value;
 		}
 		var totalPay = payRate * parseFloat(totalTime);
@@ -198,10 +198,10 @@ function getCookie(cname) {
   let ca = decodedCookie.split(';');
   for(let i = 0; i <ca.length; i++) {
     let c = ca[i];
-    while (c.charAt(0) == ' ') {
+    while (c.charAt(0) === ' ') {
       c = c.substring(1);
     }
-    if (c.indexOf(name) == 0) {
+    if (c.indexOf(name) === 0) {
       return c.substring(name.length, c.length);
     }
   }
@@ -213,7 +213,7 @@ var cookiesList = ["ordinaryPay", "mon_fri_sixPM_to_elevenPM", "saturday", "sund
 function initCookies(){
 	for (var i = 0; i < cookiesList.length; i++) {
 		let ordinaryPay = getCookie(cookiesList[i]);
-		if (ordinaryPay != "") {
+		if (ordinaryPay !== "") {
 				document.getElementById(cookiesList[i]).value = ordinaryPay;
 			} else {
 				document.getElementById(cookiesList[i]).value = 0;
@@ -224,7 +224,7 @@ function initCookies(){
 	//Monday - Friday
 	for (var i = 0; i < 5; i++) {
 		let inTime = getCookie("inTimes"+i);
-		if (inTime != "") {
+		if (inTime !== "") {
 			document.getElementsByClassName("inTimes")[i].value = inTime;
 		} else {
 			document.getElementsByClassName("inTimes")[i].value = "17:00";
@@ -232,7 +232,7 @@ function initCookies(){
 		}
 
 		let outTime = getCookie("outTimes"+i);
-		if (inTime != "") {
+		if (inTime !== "") {
 			document.getElementsByClassName("outTimes")[i].value = outTime;
 		} else {
 			document.getElementsByClassName("outTimes")[i].value = "20:00";
@@ -243,7 +243,7 @@ function initCookies(){
 	//Saturday & Sunday
 	for (var i = 5; i < 7; i++) {
 		let inTime = getCookie("inTimes"+i);
-		if (inTime != "") {
+		if (inTime !== "") {
 			document.getElementsByClassName("inTimes")[i].value = inTime;
 		} else {
 			document.getElementsByClassName("inTimes")[i].value = "09:00";
@@ -251,7 +251,7 @@ function initCookies(){
 		}
 
 		let outTime = getCookie("outTimes"+i);
-		if (inTime != "") {
+		if (inTime !== "") {
 			document.getElementsByClassName("outTimes")[i].value = outTime;
 		} else {
 			document.getElementsByClassName("outTimes")[i].value = "17:00";
@@ -262,8 +262,8 @@ function initCookies(){
 	//Checkboxes
 	for (var i = 0; i < 7; i++) {
 		let enabled = getCookie("dayCheckbox"+i);
-		if (enabled != "") {
-			if ((enabled === "false" && document.getElementsByClassName("dayCheckbox")[i].checked == true) || (enabled === "true" && document.getElementsByClassName("dayCheckbox")[i].checked == false)) {
+		if (enabled !== "") {
+			if ((enabled === "false" && document.getElementsByClassName("dayCheckbox")[i].checked === true) || (enabled === "true" && document.getElementsByClassName("dayCheckbox")[i].checked === false)) {
 				document.getElementsByClassName("dayCheckbox")[i].click();
 			}
 		} else {
@@ -275,8 +275,8 @@ function initCookies(){
 	//Break Checkboxes
 	for (var i = 0; i < 7; i++) {
 		let enabled = getCookie("breakCheckbox"+i);
-		if (enabled != "") {
-			if ((enabled === "false" && document.getElementsByClassName("breakCheckbox")[i].checked == true) || (enabled === "true" && document.getElementsByClassName("breakCheckbox")[i].checked == false)) {
+		if (enabled !== "") {
+			if ((enabled === "false" && document.getElementsByClassName("breakCheckbox")[i].checked === true) || (enabled === "true" && document.getElementsByClassName("breakCheckbox")[i].checked === false)) {
 				document.getElementsByClassName("breakCheckbox")[i].click();
 			}
 		} else {

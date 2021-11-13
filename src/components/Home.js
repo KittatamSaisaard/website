@@ -1,3 +1,4 @@
+import React from 'react';
 import profile_logo from '../images/profile_pic.png';
 import linkedIn_logo from '../images/linkedIn_logo.png';
 import '../css/Home.css';

@@ -168,6 +168,6 @@ input[type="time"] {
 	text-align: center;
 }
 
-body {
+.App-body {
 	background-color: darkgreen;
 }
