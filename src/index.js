@@ -12,7 +12,7 @@ import REC from './components/Retail-Earnings-Calculator';
 
 const rootElement = document.getElementById("root");
 render(
-  <BrowserRouter>
+  <BrowserRouter basename='/website'>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="retail-earnings-calculator" element={<REC/>}/>
