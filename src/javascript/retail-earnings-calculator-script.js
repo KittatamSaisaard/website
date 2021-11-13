@@ -1,4 +1,4 @@
-function dayToggle(button, index){
+function dayToggle(button, index){ // eslint-disable-line no-unused-vars
 	if (button.checked) {
 		document.getElementsByClassName("times")[index].style.display = "flex";
 		document.getElementsByClassName("pay")[index].style.display = "flex";
@@ -12,14 +12,14 @@ function dayToggle(button, index){
 	}
 }
 
-function isNumberKey(evt){
+function isNumberKey(evt){ // eslint-disable-line no-unused-vars
     var charCode = (evt.which) ? evt.which : evt.keyCode
     if (charCode > 31 && (charCode !== 46 &&(charCode < 48 || charCode > 57)))
         return false;
     return true;
 }
 
-function validRate(input){
+function validRate(input){ // eslint-disable-line no-unused-vars
 	if (input.value === "") {
 		input.value = 0;
 	}
@@ -113,7 +113,7 @@ function calculateTime(inTime, outTime, breakTime) {
 
     //If worked over 5 hours, then subtract 30 minutes from the total shift time
     var timeDiffFloat = parseFloat(timeDiff);
-    if (timeDiffFloat > 5.0 && breakTime == true) {
+    if (timeDiffFloat > 5.0 && breakTime === true) {
         timeDiffFloat  = timeDiffFloat  - 0.5
         if(betweenSixAndEleven >= 0.5){
             betweenSixAndEleven = betweenSixAndEleven - 0.5
@@ -149,11 +149,11 @@ function calculatePayAndHours() {
 		document.getElementsByClassName("totalPay")[i].innerHTML = "$" + (ordinaryPay + afterSixPMPay).toFixed(2).toString();
 	}
 
-	for (var i = 5; i < 7; i++) {
-		var inTime = document.getElementsByClassName("inTimes")[i].value;
-		var outTime = document.getElementsByClassName("outTimes")[i].value;
-		var breakTime = document.getElementsByClassName("breakCheckbox")[i].checked;
-		var totalTime = calculateTime(inTime, outTime, breakTime).timeDiff;
+	for (i = 5; i < 7; i++) {
+		inTime = document.getElementsByClassName("inTimes")[i].value;
+		outTime = document.getElementsByClassName("outTimes")[i].value;
+		breakTime = document.getElementsByClassName("breakCheckbox")[i].checked;
+		totalTime = calculateTime(inTime, outTime, breakTime).timeDiff;
 		//var totalTime = timeDifference(inTime, outTime);
 		document.getElementsByClassName("totalHours")[i].innerHTML = totalTime + (totalTime <= 1 ? " hour" : " hours");
 		var payRate = 0;
@@ -171,7 +171,7 @@ function calculatePayAndHours() {
 
 	var totalHoursWorked = 0;
 	var grossEarnings = 0;
-	for (var i = 0; i < 7; i++) {
+	for (i = 0; i < 7; i++) {
 		if (document.getElementsByClassName("dayCheckbox")[i].checked) {
 			grossEarnings += parseFloat(document.getElementsByClassName("totalPay")[i].innerHTML.substring(1));
 			totalHoursWorked += parseFloat(document.getElementsByClassName("totalHours")[i].innerHTML);
@@ -222,7 +222,7 @@ function initCookies(){
 	}
 
 	//Monday - Friday
-	for (var i = 0; i < 5; i++) {
+	for (i = 0; i < 5; i++) {
 		let inTime = getCookie("inTimes"+i);
 		if (inTime !== "") {
 			document.getElementsByClassName("inTimes")[i].value = inTime;
@@ -241,7 +241,7 @@ function initCookies(){
 	}
 
 	//Saturday & Sunday
-	for (var i = 5; i < 7; i++) {
+	for (i = 5; i < 7; i++) {
 		let inTime = getCookie("inTimes"+i);
 		if (inTime !== "") {
 			document.getElementsByClassName("inTimes")[i].value = inTime;
@@ -260,7 +260,7 @@ function initCookies(){
 	}
 
 	//Checkboxes
-	for (var i = 0; i < 7; i++) {
+	for (i = 0; i < 7; i++) {
 		let enabled = getCookie("dayCheckbox"+i);
 		if (enabled !== "") {
 			if ((enabled === "false" && document.getElementsByClassName("dayCheckbox")[i].checked === true) || (enabled === "true" && document.getElementsByClassName("dayCheckbox")[i].checked === false)) {
@@ -273,7 +273,7 @@ function initCookies(){
 	}
 
 	//Break Checkboxes
-	for (var i = 0; i < 7; i++) {
+	for (i = 0; i < 7; i++) {
 		let enabled = getCookie("breakCheckbox"+i);
 		if (enabled !== "") {
 			if ((enabled === "false" && document.getElementsByClassName("breakCheckbox")[i].checked === true) || (enabled === "true" && document.getElementsByClassName("breakCheckbox")[i].checked === false)) {
@@ -286,7 +286,7 @@ function initCookies(){
 	}
 }
 
-function init() {
+function init() { // eslint-disable-line no-unused-vars
 	initCookies();
 	calculatePayAndHours();
 }
