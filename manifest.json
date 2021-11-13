@@ -1,0 +1,8 @@
+{
+  "short_name": "Kit Website",
+  "name": "Kittatam Saisaard Website",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#226e93",
+  "background_color": "#f2f2f2"
+}
