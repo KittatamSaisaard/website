@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from "react-dom";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -11,11 +11,11 @@ import NotFound from './components/NotFound'
 
 const rootElement = document.getElementById("root");
 render(
-  <BrowserRouter>
+  <HashRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path='*' element={<NotFound/>} />
     </Routes>
-  </BrowserRouter>,
+  </HashRouter>,
   rootElement
 );
