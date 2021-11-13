@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  HashRouter,
+  BrowserRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -12,14 +12,14 @@ import REC from './components/Retail-Earnings-Calculator';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route exact path="retail-earnings-calculator" element={<REC/>}/>
         <Route exact path="rec" element={<REC/>}/>
         <Route exact path="*" element={<NotFound/>}/>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
