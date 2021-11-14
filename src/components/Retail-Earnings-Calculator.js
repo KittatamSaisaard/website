@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import '../css/retail-earnings-calculator-style.css';
 import '../javascript/retail-earnings-calculator-script';
 
