@@ -7,7 +7,7 @@
 	justify-content: flex-start;
 }
 
-.results {
+.border {
 	padding: 10px;
 	margin: 20px;
 	background-color: forestgreen;
@@ -170,4 +170,9 @@ input[type="time"] {
 
 .App-body {
 	background-color: darkgreen;
+	height: auto;
+	width: calc(100vw - 40px);
+	padding: 1px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
