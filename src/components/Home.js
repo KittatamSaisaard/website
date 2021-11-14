@@ -17,9 +17,9 @@ function Home() {
             'Hi, I\'m Kit, a Computer Science Student 💻', typical_wait_time, 
             'Hi, I\'m Kit, a Computer Science Student, at The University of Adelaide 🏫', typical_wait_time, 
             'Hi, I\'m Kit, a Computer Science Student, Majoring in Artifical Intelligence 🤖', typical_wait_time, 
+            'Hi, I\'m Kit, a Software Developer 👨‍💻', typical_wait_time, 
             'Hi, I\'m Kit, a Volunteer 🙋‍♂️', typical_wait_time,
             'Hi, I\'m Kit, a Nightfill Assistant 🛒', typical_wait_time,
-            'Hi, I\'m Kit, an Investor 📈🚀🌕', typical_wait_time,
             'Hi, I\'m Kit, a Speedcuber 🏆', typical_wait_time,
           ]}
           loop={Infinity}
