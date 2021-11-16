@@ -1,9 +1,14 @@
 .Home {
-  /* background-color: #f2f2f2; */
+  background-color: #f2f2f2;
   opacity: 1;
   margin: 3vw;
-  justify-content: center;
-  background-color: transparent;
+  background: transparent;
+}
+
+.about {
+  min-height: 100px;
+  min-width: 100vw;
+  background: #f2f2f2;
 }
 
 hr{
@@ -55,7 +60,7 @@ hr{
   }
 }
 
-.Home-body {
+.LinkedIn {
   /* min-height: 100vh; */
   display: flex;
   flex-direction: row;
@@ -65,7 +70,7 @@ hr{
   margin-right: 5vw;
 }
 
-.Home-body p {
+.LinkedIn p {
   color: #226e93;
   font-family: Lato, sans-serif;
   font-weight: 800;
