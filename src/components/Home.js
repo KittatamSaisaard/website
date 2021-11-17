@@ -2,10 +2,13 @@ import React, {useState, useEffect} from 'react';
 import profile_logo from '../images/profile_pic.png';
 import linkedIn_logo from '../images/linkedIn_logo.png';
 import '../css/Home.css';
+import '../css/About.css';
 import TypeIt from "typeit-react";
 import Particles from "react-tsparticles";
 import HashLoader  from "react-spinners/HashLoader";
 import FadeIn from 'react-fade-in';
+// import About from './About';
+// import Education from './Education';
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -100,18 +103,21 @@ export default function Home() {
               <TypeIt className="Typical" options={{ cursorChar: "|", loop: true }}
                 getBeforeInit={(instance) => {
                   instance
-                    .pause(1500).type("Hi, I'm <b>Kit</b>.", { speed: 100, lifeLike: true })
+                    .pause(1500).type("Hi, I'm <b>KitKat</b>", { speed: 100, lifeLike: true })
+                    .pause(200).delete(3, { deleteSpeed: 15, lifeLike: true }).type(".", { speed: 40, lifeLike: true })
                     .pause(2000).delete(1).pause(200).type(", a <b>Computer Science</b> Student 💻", { speed: 50, lifeLike: true })
                     .pause(1500).delete(2).pause(200)
                     .type(", Majoring in <b>Artifical Intelligence</b> 🤖", { speed: 40, lifeLike: true })
                     .pause(2500).delete(1, { deleteSpeed: 200, lifeLike: true }).pause(200)
                     .type("at The <b>University of Adelaide</b> 🏫", { speed: 40, lifeLike: true })
-                    .pause(2500).delete(95, { deleteSpeed: 15, lifeLike: true }).pause(200)
+                    .pause(2500).delete(95, { deleteSpeed: 5, lifeLike: true }).pause(200)
                     .type(" a <b>Software Developer</b> 💻", { speed: 40, lifeLike: true })
                     .pause(2500).delete(23, { deleteSpeed: 15, lifeLike: true }).pause(200)
-                    .type(" a <b>Volunteer</b> ✋", { speed: 40 })
+                    .type(" a <b>Volunteer</b> 🙋", { speed: 40 })
                     .pause(2500).delete(14, { deleteSpeed: 15, lifeLike: true }).pause(200)
                     .type(" a <b>Night Fill Assistant</b> 🛒", { speed: 40, lifeLike: true })
+                    .pause(2500).delete(25, { deleteSpeed: 15 }).pause(400)
+                    .type(" a <b>Gym Junkie</b> 💪", { speed: 40, lifeLike: true })
                     .pause(2500).delete(null, { deleteSpeed: 15 }).pause(400);
 
                   return instance;
@@ -131,16 +137,14 @@ export default function Home() {
           </body>
         </FadeIn>}
     </div>
-    {/* {loading ?
+    {loading ?
       <></>
       :
-      <div className="about">
-        My name is Kittatam Saisaard
-I am a final-year Computer Science student at The University of Adelaide
-currently persuing Artifical Intelligence as major. I am a Full-Stack developer with
-experience in web and app development.
-      </div>
-    } */}
+      <>
+        {/* <About/> */}
+        {/* <Education/> */}
+      </>
+    }
     </>
   );
 }
