@@ -46,7 +46,7 @@ export default function Home() {
           "value": 7,
           "density": {
             "enable": true,
-            "value_area": 80
+            "value_area": 50
           }
         },
         "color": {
