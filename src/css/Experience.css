@@ -1,8 +1,4 @@
-#outmost_idiv_education {
-  width: 100vw;
-}
-
-.education {
+.experience {
   min-height: 100px;
   background: #f2f2f2;
   display: flex;
@@ -11,32 +7,15 @@
 }
 
 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.education {
-  min-height: 100px;
-  background: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.idiv_education img {
   /* display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%; */
-  max-width: calc(50px + 25vw);
-  height: auto;
   margin-left: 4vw;
   margin-right: 3vw;
 }
 
-.idiv_education {
+.idiv_experience {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -53,8 +32,9 @@ img {
 }
 
 .idiv_description p{
-  margin: 10px;
+  /* margin: 10px; */
   font-size: calc(10px + 0.5vw);
+  margin-right: 4vw;
 }
 
 .idiv_description h1 {
@@ -65,7 +45,7 @@ img {
   margin-bottom: 0;
 }
 
-.idiv_education h2, .idiv_education h3 {
+.idiv_experience h2, .idiv_experience h3 {
   font-weight: normal;
   margin: 0;
   /* display: flex; */
@@ -80,36 +60,26 @@ img {
   /* margin-right: 1vw; */
 }
 
-.idiv_education h2 {
+.idiv_experience h2 {
   margin-top: 5px;
   font-size: 150%;
 }
 
 @media only screen and (max-width: 767px) {
-  .idiv_education {
+  .idiv_experience {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  .idiv_education h1, .idiv_education h2, .idiv_education h3  {
+  .idiv_experience h1, .idiv_experience h2, .idiv_experience h3  {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .idiv_education h1 {
-    font-size: 5.5vw;
-    text-align: center;
-  }
-
-  .idiv_education h2 {
-    font-size: 4.5vw;
-    text-align: center;
-  }
-
-  .idiv_education p {
+  .idiv_experience p {
     margin-left: 4vw;
   }
 }

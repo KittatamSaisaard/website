@@ -1,16 +1,9 @@
 .about {
   min-height: 100px;
-  min-width: 100vw;
   background: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-#sectionNames{
-  font-family: Verdana, sans-serif;
-  color: #949494;
-  font-size: calc(4px + 3.5vw);
 }
 
 #bio{
@@ -21,11 +14,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.education {
-  min-height: 100px;
-  min-width: 100vw;
-  background: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+hr{
+  border: 1px solid #000000;
+  opacity: 0.15;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
 }

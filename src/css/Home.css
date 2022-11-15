@@ -1,17 +1,8 @@
 .Home {
   background-color: #f2f2f2;
   opacity: 1;
-  margin: 3vw;
+  /* margin: 3vw; */
   background: transparent;
-}
-
-.about {
-  min-height: 100px;
-  min-width: 100vw;
-  background: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #sectionNames{
@@ -20,32 +11,17 @@
   font-size: calc(4px + 3.5vw);
 }
 
-#bio{
-  color: #589ebf;
-  margin-left: 3vw;
-  margin-right: 3vw;
-  margin-bottom: 3vw;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.education {
-  min-height: 100px;
-  min-width: 100vw;
-  background: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 hr{
   border: 1px solid #000000;
   opacity: 0.15;
   margin-top: 3vw;
   margin-bottom: 3vw;
+  margin-left: 3vw;
+  margin-right: 3vw;
 }
 
 .Profile-logo {
-  height: calc(10px + 40vw);
+  /* height: calc(10px + 40vw); */
   pointer-events: none;
   border-radius: 50%;
 }
@@ -63,6 +39,7 @@ hr{
   justify-content: center;
   margin-left: 5vw;
   margin-right: 5vw;
+  margin-top: 3vw;
   margin-bottom: 5vw;
 }
 
@@ -91,7 +68,6 @@ hr{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
   margin-left: 5vw;
   margin-right: 5vw;
 }
@@ -104,6 +80,13 @@ hr{
   text-align: center;
   font-size: calc(5px + 3vw);
   margin-right: 1vw;
+}
+
+.Home-body {
+  margin: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Home-body img {

@@ -3,12 +3,15 @@ import profile_logo from '../images/profile_pic.png';
 import linkedIn_logo from '../images/linkedIn_logo.png';
 import '../css/Home.css';
 import '../css/About.css';
+import '../css/Education.css';
+import '../css/Experience.css';
 import TypeIt from "typeit-react";
 import Particles from "react-tsparticles";
 import HashLoader  from "react-spinners/HashLoader";
 import FadeIn from 'react-fade-in';
-// import About from './About';
-// import Education from './Education';
+import About from './About';
+import Education from './Education';
+import Experience from './Experience';
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
@@ -23,82 +26,84 @@ export default function Home() {
   }, []);
 
   return (
-    <><div className="Home">
+    <><div className="Home">   
       <Particles className="particles"
-        params={{
-          fpsLimit: 60,
-          "background": {
-            "color": {
-              "value": "#f2f2f2"
-            },
-            "position": "50% 50%",
-            "repeat": "no-repeat",
-            "size": "cover"
-          },
-          "fullScreen": {
-            "zIndex": 1
-          },
-          "particles": {
-            "number": {
-              "value": 7,
-              "density": {
-                "enable": true,
-                "value_area": 50
-              }
-            },
-            "color": {
-              "value": "#4ca7d4"
-            },
-            "links": {
-              "distance": 150,
+    params={{
+      fpsLimit: 120,
+      "background": {
+        "color": {
+          "value": "#f2f2f2"
+        },
+        "position": "50% 50%",
+        "repeat": "no-repeat",
+        "size": "cover"
+      },
+      "fullScreen": {
+        "zIndex": 1
+      },
+      "particles": {
+        "number": {
+          "value": 7,
+          "density": {
+            "enable": true,
+            "value_area": 60
+          }
+        },
+        "color": {
+          "value": "#4ca7d4"
+        },
+        "links": {
+          "distance": 150,
+          "enable": true,
+          "color": {
+            "value": "#e6e6e6"
+          }
+        },
+        "move": {
+          "enable": true
+        },
+        "size": {
+          "value": 2
+        }
+      },
+      "interactivity": {
+        "events": {
+          // "onClick": {
+          //   "enable": true,
+          //   "mode": "push"
+          // },
+          "onHover": {
+            "enable": true,
+            "mode": "grab",
+            "parallax": {
               "enable": true,
-              "color": {
-                "value": "#e6e6e6"
-              }
-            },
-            "move": {
-              "enable": true
-            },
-            "size": {
-              "value": 2
-            }
-          },
-          "interactivity": {
-            "events": {
-              // "onClick": {
-              //   "enable": true,
-              //   "mode": "push"
-              // },
-              "onHover": {
-                "enable": true,
-                "mode": "grab",
-                "parallax": {
-                  "enable": true,
-                  "force": 60
-                }
-              }
-            },
-            "modes": {
-              "bubble": {
-                "distance": 400,
-                "duration": 2,
-                "opacity": 0.8,
-                "size": 40
-              },
-              "grab": {
-                "distance": 400
-              }
+              "force": 60
             }
           }
-        }} />
+        },
+        "modes": {
+          "bubble": {
+            "distance": 400,
+            "duration": 2,
+            "opacity": 0.8,
+            "size": 40
+          },
+          "grab": {
+            "distance": 400
+          }
+        }
+      }
+      }} />   
       {loading ?
         <HashLoader
           color={'#226e93'}
           loading={loading}
           size={250} />
+          
         :
         <FadeIn transitionDuration={2000} delay={250}>
           <header className="Home-header">
+   
             <div className="Typeit">
               <TypeIt className="Typical" options={{ cursorChar: "|", loop: true }}
                 getBeforeInit={(instance) => {
@@ -108,7 +113,7 @@ export default function Home() {
                     .pause(2000).delete(1).pause(200).type(", a <b>Computer Science</b> Student 💻", { speed: 50, lifeLike: true })
                     .pause(1500).delete(2).pause(200)
                     .type(", Majoring in <b>Artifical Intelligence</b> 🤖", { speed: 40, lifeLike: true })
-                    .pause(2500).delete(1, { deleteSpeed: 200, lifeLike: true }).pause(200)
+                    .pause(2500).delete(1, { deleteSpeed: 15, lifeLike: true }).pause(200)
                     .type("at The <b>University of Adelaide</b> 🏫", { speed: 40, lifeLike: true })
                     .pause(2500).delete(95, { deleteSpeed: 5, lifeLike: true }).pause(200)
                     .type(" a <b>Software Developer</b> 💻", { speed: 40, lifeLike: true })
@@ -135,16 +140,12 @@ export default function Home() {
               </a>
             </div>
           </body>
-        </FadeIn>}
+          <About/>
+          <Experience/>
+          <Education/>
+        </FadeIn>
+      }
     </div>
-    {loading ?
-      <></>
-      :
-      <>
-        {/* <About/> */}
-        {/* <Education/> */}
-      </>
-    }
     </>
   );
 }
