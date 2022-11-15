@@ -8,7 +8,7 @@ import '../css/Education.css';
 import '../css/Experience.css';
 import TypeIt from "typeit-react";
 import Particles from "react-tsparticles";
-import HashLoader  from "react-spinners/HashLoader";
+// import HashLoader  from "react-spinners/HashLoader";
 import FadeIn from 'react-fade-in';
 
 // import About from './About';
@@ -25,7 +25,7 @@ export default function Home() {
     setTimeout(() => {
       setLoading(false)
     }, loading_time)
-  }, []);
+  }, [loading_time]);
 
   return (
     <><div className="Home">   
