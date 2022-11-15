@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import profile_logo from '../images/profile_pic.png';
 import linkedIn_logo from '../images/linkedIn_logo.png';
+import ks_loading_once from '../images/ks-loading-once.gif';
 import '../css/Home.css';
 import '../css/About.css';
 import '../css/Education.css';
@@ -9,6 +10,7 @@ import TypeIt from "typeit-react";
 import Particles from "react-tsparticles";
 import HashLoader  from "react-spinners/HashLoader";
 import FadeIn from 'react-fade-in';
+
 // import About from './About';
 // import Education from './Education';
 // import Experience from './Experience';
@@ -16,7 +18,7 @@ import FadeIn from 'react-fade-in';
 export default function Home() {
   const [loading, setLoading] = useState(false);
 
-  const loading_time = 1300;
+  const loading_time = 1660+250;
 
   useEffect(() => {
     setLoading(true)
@@ -95,11 +97,11 @@ export default function Home() {
       }
       }} />   
       {loading ?
-        <HashLoader
-          color={'#226e93'}
-          loading={loading}
-          size={250} />
-          
+        // <HashLoader
+        //   color={'#226e93'}
+        //   loading={loading}
+        //   size={250} />
+        <img src={ks_loading_once} className="ks-loading" alt="ks-loading"/>     
         :
         <FadeIn transitionDuration={2000} delay={250}>
           <header className="Home-header">

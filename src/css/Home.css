@@ -32,6 +32,11 @@ hr{
   pointer-events: none;
 }
 
+.ks-loading {
+  height: 25vw;
+  width: 25vw;
+}
+
 .Home-header {
   display: flex;
   flex-direction: row;
@@ -60,6 +65,11 @@ hr{
     letter-spacing: 0.5px;
     text-align: center;
     font-size: calc(4px + 2.5vw);
+  }
+
+  .ks-loading {
+    height: 50vw;
+    width: 50vw;
   }
 }
 
