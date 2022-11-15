@@ -115,7 +115,7 @@ export default function Home() {
                     .type("with a Major in <b>Artifical Intelligence</b> 🤖", { speed: 40, lifeLike: true })
                     .pause(2500).delete(1, { deleteSpeed: 15, lifeLike: true }).pause(200)
                     .type("from The <b>University of Adelaide</b> 🏫", { speed: 40, lifeLike: true })
-                    .pause(2500).delete(99, { deleteSpeed: 3, lifeLike: true }).pause(200)
+                    .pause(2500).delete(99, { deleteSpeed: 5, lifeLike: true }).pause(200)
                     .type(" <b>Software Developer</b> 💻", { speed: 40, lifeLike: true })
                     .pause(2500).delete(20, { deleteSpeed: 15, lifeLike: true }).pause(200)
                     .type("<b>Volunteer</b> 🙋", { speed: 40 })
