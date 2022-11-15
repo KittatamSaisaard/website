@@ -9,9 +9,9 @@ import TypeIt from "typeit-react";
 import Particles from "react-tsparticles";
 import HashLoader  from "react-spinners/HashLoader";
 import FadeIn from 'react-fade-in';
-import About from './About';
-import Education from './Education';
-import Experience from './Experience';
+// import About from './About';
+// import Education from './Education';
+// import Experience from './Experience';
 
 export default function Home() {
   const [loading, setLoading] = useState(false);
