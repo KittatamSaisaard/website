@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import profile_logo from '../images/profile_pic.png';
 import linkedIn_logo from '../images/linkedIn_logo.png';
+import github_logo from '../images/github_logo.png';
 import ks_loading_once from '../images/ks-loading-once.gif';
 import '../css/Home.css';
 import '../css/About.css';
@@ -139,6 +140,14 @@ export default function Home() {
               </p>
               <a href="https://www.linkedin.com/in/kittatam-saisaard/" target="react/jsx-no-target-blank">
                 <img border="0" src={linkedIn_logo} className="LinkedIn-logo" alt="LinkedIn Logo" />
+              </a>
+            </div>
+            <div className="GitHub">
+              <p>
+                Follow me on GitHub
+              </p>
+              <a href="https://github.com/KittatamSaisaard" target="react/jsx-no-target-blank">
+                <img border="0" src={github_logo} className="GitHub-logo" alt="GitHub Logo" />
               </a>
             </div>
           </body>

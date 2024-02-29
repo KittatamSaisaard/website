@@ -32,6 +32,12 @@ hr{
   pointer-events: none;
 }
 
+.GitHub-logo {
+  height: calc(25px + 10vw);
+  width: auto;
+  pointer-events: none;
+}
+
 .ks-loading {
   height: 25vw;
   width: 25vw;
@@ -73,8 +79,7 @@ hr{
   }
 }
 
-.LinkedIn {
-  /* min-height: 100vh; */
+.LinkedIn, .GitHub {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -92,9 +97,21 @@ hr{
   margin-right: 1vw;
 }
 
+.GitHub p {
+  color: #226e93;
+  font-family: Lato, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-size: calc(5px + 3vw);
+  width: 50vw;
+  margin-right: 3vw;
+}
+
 .Home-body {
   margin: 3vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
