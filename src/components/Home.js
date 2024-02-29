@@ -122,8 +122,8 @@ export default function Home() {
                     .pause(2500).delete(20, { deleteSpeed: 15, lifeLike: true }).pause(200)
                     .type("<b>Volunteer</b> 🙋", { speed: 40 })
                     .pause(2500).delete(11, { deleteSpeed: 15, lifeLike: true }).pause(200)
-                    .type("<b>Night Fill Assistant</b> 🛒", { speed: 40, lifeLike: true })
-                    .pause(2500).delete(22, { deleteSpeed: 15 }).pause(400)
+                    // .type("<b>Night Fill Assistant</b> 🛒", { speed: 40, lifeLike: true })
+                    // .pause(2500).delete(22, { deleteSpeed: 15 }).pause(400)
                     .type("<b>Gym Junkie</b> 💪", { speed: 40, lifeLike: true })
                     .pause(2500).delete(null, { deleteSpeed: 15 }).pause(200);
 
