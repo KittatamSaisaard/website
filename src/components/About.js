@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../css/About.css';
 import Box from '@mui/material/Box';
-
+import linkedIn_logo from "../images/linkedIn_logo.png";
 
 export default function About() {
 
@@ -22,6 +22,15 @@ export default function About() {
           My love for problem solving and making lives easier will serve me well to ultimately contributing to solving problems that will advance the world.
         </span>
       </span>
+      </Box>
+      <br></br>
+      <Box component="div" className='about' sx={{backgroundColor: '#fff'}}>
+        <div className="LinkedIn">
+          <p>Connect with me on LinkedIn</p>
+          <a href="https://www.linkedin.com/in/kittatam-saisaard/" target="react/jsx-no-target-blank">
+            <img border="0" src={linkedIn_logo} className="LinkedIn-logo" alt="LinkedIn Logo" />
+          </a>
+        </div>
       </Box>
     </Box>
   );
