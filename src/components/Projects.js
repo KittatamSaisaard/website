@@ -10,7 +10,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <Box component="section" sx={{p: 5, px: {lg: '5.5vw', xs: '0'}}}>
+    <Box component="section" sx={{backgroundColor: '#545454', p: 5, px: {lg: '15vw', xs: '0'}}}>
       <div className="GitHub">
         <p>Check out my projecs on GitHub!</p>
         <a href="https://github.com/KittatamSaisaard" target="react/jsx-no-target-blank">
