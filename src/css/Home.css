@@ -37,7 +37,6 @@ hr{
   height: calc(25px + 10vw);
   width: auto;
   pointer-events: none;
-  /* margin-left: 5vw !important; */
 }
 
 .KS_Logo {
@@ -109,20 +108,14 @@ hr{
   }
 }
 
-.LinkedIn{
+.LinkedIn {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-left: 5vw;
   margin-right: 5vw;
-}
-
-.GitHub{
-  display: inline;
-  /* flex-direction: row; */
-  align-items: center;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .LinkedIn p {
@@ -131,8 +124,14 @@ hr{
   font-weight: 800;
   letter-spacing: 0.5px;
   text-align: center;
-  font-size: calc(5px + 3vw);
+  font-size: calc(2em);
   margin-right: 1vw;
+}
+
+.GitHub {
+  align-items: center;
+  text-align: center;
+  padding-top: .75em;
 }
 
 .GitHub p {
@@ -142,8 +141,11 @@ hr{
   letter-spacing: 0.5px;
   text-align: center;
   font-size: calc(5px + 3vw);
-  width: 15em;
-  margin-right: 3vw;
+}
+
+.GitHub img {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .Home-body {

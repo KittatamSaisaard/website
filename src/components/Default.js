@@ -320,7 +320,7 @@ export default function Default(props) {
               : null//<Home/>
               }
             </Box>
-            { (props.page !== 'projects') ?
+            { (props.page !== 'NA') ?
               <Toolbar sx={{ top: 'auto', bottom: 0 }} style={{ background: '#414245' }}>
                 <Copyright  />
                 <Box sx={{ flexGrow: 1 }} />

@@ -157,7 +157,7 @@ export default function Home() {
                 }}
               />
             </div>
-            <img src={profile_logo} className="Profile-logo" alt="logo" />
+            <img src={profile_logo} id="Profile-logo" alt="logo" />
           </header>
           {/* <hr /> */}
           {/* <body className="Home-body">
