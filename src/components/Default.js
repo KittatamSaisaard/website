@@ -67,7 +67,8 @@ export default function Default(props) {
       if (path !== 'Home'){
         navigate("../#" + path.toLowerCase(), { replace: true });
       } else {
-        navigate(0);
+        navigate("../", { replace: true });
+        window.scrollTo(0, 0);
       }
   };
 
@@ -109,11 +110,11 @@ export default function Default(props) {
 
   return (
     <Box className="Home" id="home">
-      {loading ? (
+      {/* {loading ? (
         <img src={ks_loading_once} className="ks-loading" alt="ks-loading" />
-      ) : (
+      ) : ( */}
         <React.Fragment>
-        <FadeIn transitionDuration={2000} delay={250}>
+        {/* <FadeIn transitionDuration={2000} delay={250}> */}
         <AppBar component="nav" style={{ background: '#414245', height: '3.75em'}}>
         <Toolbar>
           <IconButton
@@ -348,9 +349,9 @@ export default function Default(props) {
               : null
             }
           </Container>
-        </FadeIn>
+        {/* </FadeIn> */}
         </React.Fragment>
-      )}
+      {/* )} */}
     </Box>
     
   );
