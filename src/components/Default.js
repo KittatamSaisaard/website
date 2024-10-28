@@ -67,7 +67,7 @@ export default function Default(props) {
       if (path !== 'Home'){
         navigate("../#" + path.toLowerCase(), { replace: true });
       } else {
-        navigate("../", { replace: true });
+        navigate(0);
       }
   };
 
@@ -114,7 +114,7 @@ export default function Default(props) {
       ) : (
         <React.Fragment>
         <FadeIn transitionDuration={2000} delay={250}>
-        <AppBar component="nav" style={{ background: '#414245', position: "sticky", height: '3.75em'}}>
+        <AppBar component="nav" style={{ background: '#414245', height: '3.75em'}}>
         <Toolbar>
           <IconButton
             color="inherit"
