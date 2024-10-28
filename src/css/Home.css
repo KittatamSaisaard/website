@@ -64,7 +64,6 @@ hr{
   margin-right: 5vw;
   margin-top: 3vw;
   margin-bottom: 3vw;
-  height: 100vh;
 }
 
 .Home-header span {
@@ -158,6 +157,11 @@ hr{
   background-color: transparent;
 }
 
+.drawerItem{
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+}
+
 .Typeit {
   width: 40vw;
   height: 30vw;
@@ -168,5 +172,4 @@ hr{
   position: absolute;
   width: 100%;
   z-index: 0;
-  height: 100%;
 }

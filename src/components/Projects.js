@@ -10,7 +10,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <Box component="section" sx={{backgroundColor: '#545454', p: 5, px: {lg: '15vw', xs: '0'}}}>
+    <Box component="section" id="projects" sx={{backgroundColor: '#545454', p: 5, px: {lg: '15vw', xs: '0'}}}>
       <Box component="div" sx={{backgroundColor: '#fff'}}>
         <div className="GitHub">
           <p>Check out my projecs on GitHub!</p>

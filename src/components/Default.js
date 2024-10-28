@@ -43,7 +43,7 @@ import Particles from "react-tsparticles";
 import FadeIn from "react-fade-in";
 
 const drawerWidth = 240;
-const navItems = ['Home', /*'Education',*/ 'Projects', /*'Experience',*/ 'About'];
+const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/];
 
 const Copyright = () => {
   return (
@@ -65,7 +65,7 @@ export default function Default(props) {
   let navigate = useNavigate(); 
   const handleNavigatePage = (path) => {
       if (path !== 'Home'){
-        navigate("../" + path.toLowerCase(), { replace: true });
+        navigate("../#" + path.toLowerCase(), { replace: true });
       } else {
         navigate("../", { replace: true });
       }
@@ -79,9 +79,16 @@ export default function Default(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          item !== 'Home' ?
+          <ListItem key={item} component="a" class="drawerItem" href={"#"+item.toLowerCase()} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} href="#about" onClick={() => handleNavigatePage(item)}/>
+              <ListItemText primary={item} /*onClick={() => handleNavigatePage(item)}*//>
+            </ListItemButton>
+          </ListItem>
+          :
+          <ListItem key={item} component="a" class="drawerItem" disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }}>
+              <ListItemText primary={item} onClick={() => handleNavigatePage("Home")}/>
             </ListItemButton>
           </ListItem>
         ))}
@@ -101,7 +108,7 @@ export default function Default(props) {
   }, []);
 
   return (
-    <Box className="Home">
+    <Box className="Home" id="home">
       {loading ? (
         <img src={ks_loading_once} className="ks-loading" alt="ks-loading" />
       ) : (
@@ -129,9 +136,14 @@ export default function Default(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }} onClick={() => handleNavigatePage(item)}>
-                {item}
-              </Button>
+              item !== 'Home' ?
+                <Button key={item} sx={{ color: '#fff' }} href={"#"+item.toLowerCase()} /*onClick={() => handleNavigatePage(item)}*/>
+                  {item}
+                </Button>
+              :
+                <Button key={item} sx={{ color: '#fff' }} onClick={() => handleNavigatePage("Home")}>
+                  {item}
+                </Button>
             ))}
           </Box>
         </Toolbar>
@@ -306,7 +318,9 @@ export default function Default(props) {
                 <Education/> */}
           <Container maxWidth={false} style={{ padding: '0'}}>
             <Box component="main" /*sx={{ p: props.page === undefined ? 3 : 0}}*/>
-              {
+              <About/>
+              <Projects/>
+              {/* {
               props.page ==="education"
               ? <Education/> 
               : props.page ==="about"
@@ -318,7 +332,7 @@ export default function Default(props) {
               : props.page ==="404"
               ? <NotFound/>
               : null//<Home/>
-              }
+              } */}
             </Box>
             { (props.page !== 'NA') ?
               <Toolbar sx={{ top: 'auto', bottom: 0 }} style={{ background: '#414245' }}>
