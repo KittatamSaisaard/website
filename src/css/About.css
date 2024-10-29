@@ -5,6 +5,11 @@
   align-items: center;
 }
 
+#about {
+  padding-top: 5em;
+  padding-bottom: 15em;
+}
+
 #bio{
   color: #589ebf;
   margin-left: 3vw;
