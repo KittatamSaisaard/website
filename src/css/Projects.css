@@ -13,4 +13,7 @@ h1 {
 #projects{
   padding-top: 5em;
   padding-bottom: 15em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

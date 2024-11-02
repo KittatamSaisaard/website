@@ -17,9 +17,9 @@ export default function Projects() {
 
   return (
     <Box component="section" id="projects" sx={{backgroundColor: '#cccccc', p: 5, px: {lg: '15vw', xs: '0'}}}>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 690 }}>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 280 }}
         image="/static/images/cards/contemplative-reptile.jpg"
         title="green iguana"
       />
