@@ -41,7 +41,8 @@ export default function Projects() {
     <br /><br />
     <Card sx={{ maxWidth: 690 }}>
       <CardMedia
-        sx={{ height: 372, width: 690 }}
+        component="img"
+        sx={{margin: 0, width: 690}}
         image={lights_out_game_pic}
         title="Lights Out"
       />
