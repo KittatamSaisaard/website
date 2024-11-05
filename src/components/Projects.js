@@ -71,10 +71,10 @@ export default function Projects() {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Earnings Calculator
+          Budget Calender
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-        Calculate estimated earnings for the week using the rostered hours for the retail industry. The retail industry in Australia has a different hourly pay rate after 6 pm on weekdays, which the calculator takes into consideration.
+        A calendar to show when bills need to be paid. This new website allows users to create or track their budget by entering income/expenses directly into a monthly calendar. The amounts entered are totaled at the bottom each day.
         </Typography>
       </CardContent>
       {/* <CardActions>
