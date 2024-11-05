@@ -9,6 +9,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import lights_out_game_pic from "../images/lights_out_game.png";
+import earnings_calculator_pic from "../images/earnings_calculator.png";
 
 export default function Projects() {
 
@@ -21,7 +22,8 @@ export default function Projects() {
       <h1>Projects</h1>
       <Card sx={{ maxWidth: 690 }}>
       <CardMedia
-        sx={{ height: 372, width: 690 }}
+      component="img"
+        sx={{margin: 0, height: 372, width: 690 }}
         image={lights_out_game_pic}
         title="Lights Out"
       />
@@ -42,16 +44,37 @@ export default function Projects() {
     <Card sx={{ maxWidth: 690 }}>
       <CardMedia
         component="img"
-        sx={{margin: 0, width: 690}}
-        image={lights_out_game_pic}
-        title="Lights Out"
+        sx={{margin: 0, height: 372, width: 690}}
+        image={earnings_calculator_pic}
+        title="Earnings Calculator"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lights Out
+          Earnings Calculator
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-        Lights Out Mobile Game made using Unity 3D and C#.
+        Calculate estimated earnings for the week using the rostered hours for the retail industry. The retail industry in Australia has a different hourly pay rate after 6 pm on weekdays, which the calculator takes into consideration.
+        </Typography>
+      </CardContent>
+      {/* <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions> */}
+    </Card>
+    <br /><br />
+    <Card sx={{ maxWidth: 690 }}>
+      <CardMedia
+        component="img"
+        sx={{margin: 0, height: 372, width: 690}}
+        image={earnings_calculator_pic}
+        title="Earnings Calculator"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Earnings Calculator
+        </Typography>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+        Calculate estimated earnings for the week using the rostered hours for the retail industry. The retail industry in Australia has a different hourly pay rate after 6 pm on weekdays, which the calculator takes into consideration.
         </Typography>
       </CardContent>
       {/* <CardActions>
