@@ -18,11 +18,12 @@ export default function Projects() {
 
   return (
     <Box component="section" id="projects" sx={{backgroundColor: '#cccccc', p: 5, px: {lg: '15vw', xs: '0'}}}>
+      <h1>Projects</h1>
       <Card sx={{ maxWidth: 690 }}>
       <CardMedia
-        sx={{ height: 280 }}
+        sx={{ height: 372, width: 690 }}
         image={lights_out_game_pic}
-        title="green iguana"
+        title="Lights Out"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
@@ -32,10 +33,30 @@ export default function Projects() {
         Lights Out Mobile Game made using Unity 3D and C#.
         </Typography>
       </CardContent>
-      <CardActions>
+      {/* <CardActions>
         <Button size="small">Share</Button>
         <Button size="small">Learn More</Button>
-      </CardActions>
+      </CardActions> */}
+    </Card>
+    <br /><br />
+    <Card sx={{ maxWidth: 690 }}>
+      <CardMedia
+        sx={{ height: 372, width: 690 }}
+        image={lights_out_game_pic}
+        title="Lights Out"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Lights Out
+        </Typography>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+        Lights Out Mobile Game made using Unity 3D and C#.
+        </Typography>
+      </CardContent>
+      {/* <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions> */}
     </Card>
       <Box component="section" id="projects" sx={{backgroundColor: '#d6d6d6', p: 5, px: {lg: '15vw', xs: '0'}}}>
         <Box component="div" sx={{backgroundColor: '#fff'}}>
