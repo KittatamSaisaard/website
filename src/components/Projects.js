@@ -34,6 +34,8 @@ export default function Projects() {
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
         Lights Out Mobile Game made using Unity 3D and C#.
+        To win the game, the user must turn all of the lights off by having all tiles be white.
+        When a user taps on a tile, the current and adjacent tiles (top, left, bottom, right) will turn off or on based on the current state the current tile is in. For example, if the current tile is on and a user taps on it, the current and adjacent tiles will turn off.
         </Typography>
       </CardContent>
       {/* <CardActions>
