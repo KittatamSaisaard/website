@@ -10,6 +10,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import lights_out_game_pic from "../images/lights_out_game.png";
 import earnings_calculator_pic from "../images/earnings_calculator.png";
+import budget_calendar_pic from "../images/budget_calendar.png";
 
 export default function Projects() {
 
@@ -66,8 +67,8 @@ export default function Projects() {
       <CardMedia
         component="img"
         sx={{margin: 0, height: 372, width: 690}}
-        image={earnings_calculator_pic}
-        title="Earnings Calculator"
+        image={budget_calendar_pic}
+        title="Budget Calender"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
