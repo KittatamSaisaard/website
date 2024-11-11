@@ -89,6 +89,7 @@ export default function Projects() {
           <Button size="small" href="https://github.com/KittatamSaisaard/budget-calendar" target="_blank">Github</Button>
         </CardActions>
       </Card>
+      <br /><br />
       <Box component="section" id="projects" sx={{backgroundColor: '#d6d6d6', p: 5, px: {lg: '15vw', xs: '0'}}}>
         <Box component="div" sx={{backgroundColor: '#fff'}}>
           <div className="GitHub">
