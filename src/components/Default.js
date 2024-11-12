@@ -27,10 +27,6 @@ import Home from './Home';
 import Container from '@mui/material/Container';
 import SearchIcon from '@mui/icons-material/Search';
 import MoreIcon from '@mui/icons-material/MoreVert';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 
 import About from './About';
 import Experience from './Experience';
@@ -47,7 +43,7 @@ import Particles from "react-tsparticles";
 import FadeIn from "react-fade-in";
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/];
+const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/, 'Contact'];
 
 const Copyright = () => {
   return (
