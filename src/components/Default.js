@@ -33,6 +33,7 @@ import Experience from './Experience';
 import Education from './Education';
 import NotFound from './NotFound';
 import Projects from './Projects';
+import Contact from './Contact';
 
 import profile_logo from "../images/profile_pic.png";
 import linkedIn_logo from "../images/linkedIn_logo.png";
@@ -321,6 +322,7 @@ export default function Default(props) {
             <Box component="main" /*sx={{ p: props.page === undefined ? 3 : 0}}*/>
               <About/>
               <Projects/>
+              <Contact />
               {/* {
               props.page ==="education"
               ? <Education/> 
