@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../css/About.css';
+import '../css/Contact.css';
 import Box from '@mui/material/Box';
 
 export default function Contact() {
