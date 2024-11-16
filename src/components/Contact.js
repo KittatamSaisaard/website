@@ -28,7 +28,7 @@ export default function Contact() {
 
     //   </Box>
     // </Box>
-    <div className="App"> 
+    <div id="contact"> 
     <Typography gutterBottom variant="h3" align="center">
       Contact Me
      </Typography>
