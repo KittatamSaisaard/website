@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import '../css/About.css';
 import Box from '@mui/material/Box';
 import linkedIn_logo from "../images/linkedIn_logo.png";
+import Typography from '@mui/material/Typography';
 
 export default function About() {
 
@@ -10,9 +11,9 @@ export default function About() {
   }, []);
 
   return (
-    <Box component="section" id="about" sx={{backgroundColor: '#f7f7f7', p: 5, px: {lg: '15vw', xs: '0'}}}>
+    <Box component="section" id="about" sx={{textAlign: 'center', backgroundColor: '#f7f7f7', p: 5, px: {lg: '15vw', xs: '0'}}}>
+      <Typography variant="h1" gutterBottom>About me</Typography>
       <Box component="div" className='about' sx={{backgroundColor: '#fff'}}>
-      <h1>About Me</h1>
       <span id="bio" style={{ textAlign: 'center' }}>
         <span h1 style={{color: '#396980'}}>
           Solving problems and understanding the inner workings of complex mechanisms has always been a habit of mine at a very young age. After feeling accomplished for solving a Rubik's cube for the first time, I quickly became intrigued in solving twisty puzzles as not only a personal hobby, but also competitively. The interest of solving problems later led me to studying a Bachelor of Computer Science at the University of Adelaide, in which I am currently in my third and final year, majoring in Artificial Intelligence. I am enthusiastic with applying my technical knowledge to design and create applications that improves the efficiency of routine tasks at the workplace and at home. Especially at home.

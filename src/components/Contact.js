@@ -28,10 +28,8 @@ export default function Contact() {
 
     //   </Box>
     // </Box>
-    <div id="contact"> 
-    <Typography gutterBottom variant="h3" align="center">
-      Contact Me
-     </Typography>
+    <Box id="contact" sx={{textAlign: 'center'}}> 
+     <Typography variant="h1" gutterBottom>Contact Me</Typography>
      <Typography variant="body2" color="textSecondary" component="p" align="center" gutterBottom sx={{ marginBottom: 2}}>
           Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
         </Typography> 
@@ -61,6 +59,6 @@ export default function Contact() {
         </CardContent>
       </Card>
     </Grid>
-  </div>
+  </Box>
   );
 }
