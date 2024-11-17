@@ -32,17 +32,17 @@ export default function Contact() {
     <Typography gutterBottom variant="h3" align="center">
       Contact Me
      </Typography>
+     <Typography variant="body2" color="textSecondary" component="p" align="center" gutterBottom sx={{ marginBottom: 2}}>
+          Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
+        </Typography> 
     <Grid>
       <Card style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}>
         <CardContent>
           {/* <Typography gutterBottom variant="h5">
             Contact Me
         </Typography>  */}
-          <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
-            Fill up the form and our team will get back to you within 24 hours.
-        </Typography> 
           <form>
-            <Grid container spacing={1}>
+            <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
               </Grid>
