@@ -10,7 +10,7 @@ export default function About() {
   }, []);
 
   return (
-    <Box component="section" id="about" sx={{backgroundColor: '#cccccc', p: 5, px: {lg: '15vw', xs: '0'}}}>
+    <Box component="section" id="about" sx={{backgroundColor: '#f7f7f7', p: 5, px: {lg: '15vw', xs: '0'}}}>
       <Box component="div" className='about' sx={{backgroundColor: '#fff'}}>
       <h1>About Me</h1>
       <span id="bio" style={{ textAlign: 'center' }}>

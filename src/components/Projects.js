@@ -15,10 +15,6 @@ import budget_calendar_pic from "../images/budget_calendar.png";
 
 export default function Projects() {
 
-  useEffect(() => {
-    document.body.style.backgroundColor = '#f2f2f2';
-  }, []);
-
   return (
     <Box component="section" id="projects" sx={{backgroundColor: '#cccccc', p: 5, px: {lg: '15vw', xs: '0'}}}>
       <h1>Projects</h1>
