@@ -33,10 +33,9 @@ export default function Projects() {
 
   return (
     <Box component="section" id="projects" sx={{backgroundColor: '#cccccc', p: 5, px: {lg: '15vw', xs: '0'}}}>
-      <Typography variant="h1" gutterBottom>Projects</Typography>
+      <Typography variant="h1" gutterBottom sx={{textAlign: 'center'}}>Projects</Typography>
       {projectItems.map((item) => (
-      <React.Fragment>
-        <Card sx={{display: {md: 'block', xl: 'flex'}, flexDirection: 'row', width: {md: '50%', xl: '100%'}, height: {md: '100%', xl: '100%'}}}>
+        <Card sx={{display: {md: 'block', xl: 'flex'}, flexDirection: 'row', m:10}}>
           <CardActionArea href={item.github} sx={{display: 'flex', justifyContent: 'center'}}target="_blank">
             <CardMedia
               component="img"
@@ -47,7 +46,7 @@ export default function Projects() {
               title={item.title}
             />
           </CardActionArea>
-          <CardContent sx={{width: '55%', display: {md: 'flex', xl: 'block'}, flexDirection: 'column'}}>
+          <CardContent sx={{width: {xs: '95%', xl: '55%'}, display: {md: 'flex', xl: 'block'}, flexDirection: 'column',}}>
             <Typography gutterBottom variant="h5"s component="div" sx={{fontSize: 40}}>
               {item.title}
             </Typography>
@@ -58,22 +57,11 @@ export default function Projects() {
               <Button size="small" variant="contained" href={item.github} target="_blank" sx={{fontSize: 15}}>Github</Button>
             </CardActions>
           </CardContent>
-        </Card>
-        <br /><br />
-      </React.Fragment>))}
+        </Card>))}
 
-      <Box component="section" id="projects" sx={{backgroundColor: '#d6d6d6', p: 5, px: {lg: '15vw', xs: '0'}}}>
-        <Box component="div" sx={{backgroundColor: '#fff'}}>
-          <div className="GitHub">
-            <p>Check out my projecs on GitHub!</p>
-            <a href="https://github.com/KittatamSaisaard" target="react/jsx-no-target-blank">
-              <img border="0" src={github_logo} className="GitHub-logo" alt="GitHub Logo" />
-            </a>
-          </div>
-          {/* <div id="soon">
-            <h1>More Coming Soon!</h1>
-          </div> */}
-        </Box>
+      <Box sx={{backgroundColor: '#fff', p: {xs: 2, xl: 5}, textAlign: 'center', display: 'flex', flexDirection: {xs: 'column', xl: 'row'}, justifyContent: 'center', m:10}}>
+            <Typography color="primary" variant="h3" sx={{m: {xs: 2, xl: '65px'}}}>Check out more projects on GitHub!</Typography>
+            <Box component="img" border="0" src={github_logo} alt="GitHub Logo" onClick = {() => window.open('https://github.com/KittatamSaisaard', '_blank')} sx={{cursor: 'pointer'}}/>
       </Box>
     </Box>
   );

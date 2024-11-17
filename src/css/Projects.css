@@ -1,19 +1,6 @@
-/* #soon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 45vh;
-  margin-bottom: 45vh;
-}
-
-h1 {
-  text-align: center;
-} */
-
-#projects{
-  padding-top: 5em;
-  padding-bottom: 15em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height: 40%;
 }
