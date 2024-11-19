@@ -14,15 +14,11 @@ export default function About() {
     <Box component="section" id="about" sx={{textAlign: 'center', backgroundColor: '#f7f7f7', p: 5, px: {lg: '15vw', xs: '0'}}}>
       <Typography variant="h1" gutterBottom>About me</Typography>
       <Box component="div" className='about' sx={{backgroundColor: '#fff'}}>
-      <span id="bio" style={{ textAlign: 'center' }}>
-          <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: 20 }}>
-            Solving problems and understanding the inner workings of complex mechanisms has always been a habit of mine at a very young age. After feeling accomplished for solving a Rubik's cube for the first time, I quickly became intrigued in solving twisty puzzles as not only a personal hobby, but also competitively. The interest of solving problems later led me to studying a Bachelor of Computer Science at the University of Adelaide, in which I am currently in my third and final year, majoring in Artificial Intelligence. I am enthusiastic with applying my technical knowledge to design and create applications that improves the efficiency of routine tasks at the workplace and at home. Especially at home.
-            <br /><br />
-            Having a long-term outlook for the future has been more prevalent for me after graduating from high school. Securing a confident and comfortable future financially through long term equity investments and more importantly, interpersonal development, are extracurricular activities that I enjoy, just like chocolate.
-            <br /><br />
-            My love for problem solving and making lives easier will serve me well to ultimately contributing to solving problems that will advance the world.
+          <Typography variant="body2" id="bio" sx={{ color: 'text.secondary', fontSize: 20, textAlign: 'center' }}>
+          As a tech enthusiast passionate about solving complex problems, I thrive at the intersection of curiosity and innovation. With experience in software development and emerging technologies, I focus on creating user-centric applications that enhance efficiency and push boundaries. I’m committed to continuous learning, fostering collaboration, and building solutions that make a meaningful impact.
+          <br></br><br></br>
+          When I’m not coding or brainstorming ideas, you’ll find me solving Rubik’s cubes, exploring new trails, or diving into the latest tech trends. Let’s connect, collaborate and shape the future of technology together!
           </Typography>
-      </span>
       </Box>
       <br></br>
       <Box component="div" className='about' sx={{backgroundColor: '#fff'}}>
