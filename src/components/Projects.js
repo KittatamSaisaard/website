@@ -59,7 +59,7 @@ export default function Projects() {
           </CardContent>
         </Card>))}
 
-      <Box sx={{backgroundColor: '#fff', p: {xs: 2, xl: 5}, textAlign: 'center', display: 'flex', flexDirection: {xs: 'column', xl: 'row'}, justifyContent: 'center', m:10}}>
+      <Box sx={{backgroundColor: '#fff', p: {xs: 2, xl: 5}, textAlign: 'center', display: 'flex', flexDirection: {xs: 'column', xl: 'row'}, justifyContent: 'center', m: 10}}>
             <Typography color="primary" variant="h3" sx={{m: {xs: 2, xl: '65px'}}}>Check out more projects on GitHub!</Typography>
             <Box component="img" border="0" src={github_logo} alt="GitHub Logo" onClick = {() => window.open('https://github.com/KittatamSaisaard', '_blank')} sx={{cursor: 'pointer'}}/>
       </Box>

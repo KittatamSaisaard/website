@@ -21,14 +21,18 @@ export default function About() {
           </Typography>
       </Box>
       <br></br>
-      <Box component="div" className='about' sx={{backgroundColor: '#fff'}}>
+      <Box sx={{backgroundColor: '#fff', p: {xs: 1, xl: 5}, pb: {xs: 5}, pt: {xs: 4}, textAlign: 'center', display: 'flex', flexDirection: {xs: 'column', xl: 'row'}, justifyContent: 'center'}}>
+            <Typography color="primary" variant="h3" sx={{m: {xs: 2, xl: '65px'}}}>Connect with me on LinkedIn</Typography>
+            <Box component="img" border="0" src={linkedIn_logo} alt="LinkedIn Logo" onClick = {() => window.open('https://www.linkedin.com/in/kittatam-saisaard/', '_blank')} sx={{cursor: 'pointer'}}/>
+      </Box>
+      {/* <Box component="div" className='about' sx={{backgroundColor: '#fff'}}>
         <div className="LinkedIn">
           <p>Connect with me on LinkedIn</p>
           <a href="https://www.linkedin.com/in/kittatam-saisaard/" target="react/jsx-no-target-blank">
             <img border="0" src={linkedIn_logo} className="LinkedIn-logo" alt="LinkedIn Logo" />
           </a>
         </div>
-      </Box>
+      </Box> */}
     </Box>
   );
 }
