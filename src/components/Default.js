@@ -28,8 +28,10 @@ import About from './About';
 import Projects from './Projects';
 
 import profile_logo from "../images/profile_pic.png";
+// import ks_loading_once from "../images/ks-loading-once.gif";
 import TypeIt from "typeit-react";
 import Particles from "react-tsparticles";
+// import FadeIn from 'react-fade-in';
 
 const drawerWidth = 400;
 const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/, /*'Contact'*/];
@@ -356,6 +358,5 @@ export default function Default(props) {
         </React.Fragment>
       {/* )} */}
     </Box>
-    
   );
 }
