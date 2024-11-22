@@ -44,7 +44,7 @@ import Particles from "react-tsparticles";
 import FadeIn from "react-fade-in";
 
 const drawerWidth = 400;
-const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/, 'Contact'];
+const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/, /*'Contact'*/];
 
 const Copyright = () => {
   return (
@@ -327,7 +327,7 @@ export default function Default(props) {
             <Box component="main"/*sx={{ p: props.page === undefined ? 3 : 0}}*/>
               <About/>
               <Projects/>
-              <Contact />
+              {/* <Contact /> */}
               {/* {
               props.page ==="education"
               ? <Education/> 

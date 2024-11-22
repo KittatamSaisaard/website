@@ -41,6 +41,7 @@ export default function Projects() {
               component="img"
               sx={{margin: 0, 
                 height: item.title === "Earnings Calculator" ? 420 : '100%', width: item.title === "Earnings Calculator" ? 835 : '100%',
+                maxWidth: {xl: '732px'}
               }}
               image={item.image}
               title={item.title}
@@ -54,7 +55,7 @@ export default function Projects() {
             {item.description}
             </Typography>
             <CardActions sx={{paddingLeft:0, marginTop: 1}}>
-              <Button size="small" variant="contained" href={item.github} target="_blank" sx={{fontSize: 15}}>Github</Button>
+              <Button size="small" variant="contained" href={item.github} target="_blank" sx={{fontSize: {xl: 20, xs: 30}}}>Github</Button>
             </CardActions>
           </CardContent>
         </Card>))}

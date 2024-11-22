@@ -184,6 +184,9 @@ hr{
   position: absolute;
   width: 100%;
   z-index: 0;
+  min-width: 1000px;
+  bottom: 0;
+  top: 0;
 }
 
 html {
