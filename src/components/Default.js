@@ -43,7 +43,7 @@ import TypeIt from "typeit-react";
 import Particles from "react-tsparticles";
 import FadeIn from "react-fade-in";
 
-const drawerWidth = 340;
+const drawerWidth = 400;
 const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/, 'Contact'];
 
 const Copyright = () => {
@@ -84,14 +84,14 @@ export default function Default(props) {
           item !== 'Home' ?
           <ListItem key={item} component="a" class="drawerItem" href={"#"+item.toLowerCase()} disablePadding>
             <ListItemButton>
-              <ListItemText primary={item} primaryTypographyProps={{fontSize: 50}} class='test'/*onClick={() => handleNavigatePage(item)}*//>
+              <ListItemText primary={item} primaryTypographyProps={{fontSize: 70}} class='test'/*onClick={() => handleNavigatePage(item)}*//>
             </ListItemButton>
             <Divider sx={{ borderBottomWidth: 10 }}/>
           </ListItem>
           :
           <ListItem key={item} component="a" class="drawerItem" disablePadding>
             <ListItemButton>
-              <ListItemText primary={item} primaryTypographyProps={{fontSize: 50}} onClick={() => handleNavigatePage("Home")}/>
+              <ListItemText primary={item} primaryTypographyProps={{fontSize: 70}} onClick={() => handleNavigatePage("Home")}/>
             </ListItemButton>
             <Divider sx={{ borderBottomWidth: 10 }}/>
           </ListItem>
@@ -133,7 +133,7 @@ export default function Default(props) {
           <Box sx={{ display: { xs: 'none', sm: 'block' }}}>
             {navItems.map((item) => (
               item !== 'Home' ?
-                <Button key={item} sx={{color: '#fff', fontSize: 20, px: 3 }} href={"#"+item.toLowerCase()} /*onClick={() => handleNavigatePage(item)}*/>
+                <Button key={item} sx={{color: '#fff', fontSize: 20, px: 3, }} href={"#"+item.toLowerCase()} /*onClick={() => handleNavigatePage(item)}*/>
                   {item}
                 </Button>
               :
@@ -300,7 +300,13 @@ export default function Default(props) {
                 }}
               />
             </div>
-            <img src={profile_logo} className="Profile-logo" alt="logo"/>
+            <Box
+              component="img"
+              alt="logo"
+              src={profile_logo}
+              className="Profile-logo"
+              sx={{mt: 8, ml: {xs: 45, xl: 30}}}
+            />
           </header>
           {/* <hr /> */}
           {/* <body className="Home-body">
