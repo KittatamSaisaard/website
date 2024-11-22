@@ -132,12 +132,12 @@ export default function Default(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' }}}>
             {navItems.map((item) => (
-              item !== 'Home' ?
-                <Button key={item} sx={{color: '#fff', fontSize: 20, px: 3, }} href={"#"+item.toLowerCase()} /*onClick={() => handleNavigatePage(item)}*/>
+              item === 'Home' ?
+                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: 3 }} onClick={() => handleNavigatePage("Home")}>
                   {item}
                 </Button>
               :
-                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: 3 }} onClick={() => handleNavigatePage("Home")}>
+                <Button key={item} sx={{color: '#fff', fontSize: 20, px: 3, }} href={"#"+item.toLowerCase()}>
                   {item}
                 </Button>
             ))}
@@ -169,7 +169,7 @@ export default function Default(props) {
       >
         {drawer}
       </Drawer>
-          <header className="Home-header">
+          <Box component="header" className="Home-header" sx={{mt: {xl: 12, xs: 0}}}>
             <Particles
               className="particles"
               style={{ 'padding-bottom': '5'}}
@@ -240,74 +240,67 @@ export default function Default(props) {
                 },
               }}
             />
-            <div className="Typeit">
-              <TypeIt
-                className="Typical"
-                options={{ cursorChar: "|", loop: true }}
-                getBeforeInit={(instance) => {
-                  instance
-                    .pause(1500)
-                    .type("Hi, I'm <b>KitKat</b>", {
-                      speed: 100,
-                      lifeLike: true,
-                    })
-                    .pause(200)
-                    .delete(3, { deleteSpeed: 15, lifeLike: true })
-                    .type(".", { speed: 40, lifeLike: true })
-                    .pause(2000)
-                    .delete(1)
-                    .pause(200)
-                    .type(", a <b>Computer Science</b> Graduate 💻", {
-                      speed: 50,
-                      lifeLike: true,
-                    })
-                    .pause(1500)
-                    .delete(1)
-                    .pause(200)
-                    .type("with a Major in <b>Artifical Intelligence</b> 🤖", {
-                      speed: 40,
-                      lifeLike: true,
-                    })
-                    .pause(2500)
-                    .delete(1, { deleteSpeed: 15, lifeLike: true })
-                    .pause(200)
-                    .type("from The <b>University of Adelaide</b> 🏫", {
-                      speed: 40,
-                      lifeLike: true,
-                    })
-                    .pause(2500)
-                    .delete(98, { deleteSpeed: 5, lifeLike: true })
-                    .pause(200)
-                    .type("<b>Software Developer</b> 💻", {
-                      speed: 40,
-                      lifeLike: true,
-                    })
-                    .pause(2500)
-                    .delete(20, { deleteSpeed: 15, lifeLike: true })
-                    .pause(200)
-                    .type("<b>Volunteer</b> 🙋", { speed: 40 })
-                    .pause(2500)
-                    .delete(11, { deleteSpeed: 15, lifeLike: true })
-                    .pause(200)
-                    // .type("<b>Night Fill Assistant</b> 🛒", { speed: 40, lifeLike: true })
-                    // .pause(2500).delete(22, { deleteSpeed: 15 }).pause(400)
-                    .type("<b>Gym Junkie</b> 💪", { speed: 40, lifeLike: true })
-                    .pause(2500)
-                    .delete(null, { deleteSpeed: 15 })
-                    .pause(200);
+            <Box className="Typeit" sx={{fontSize: {xl: 50, xs: 30}, ml: 5}}>
+              <Typography sx={{fontSize: {xl: 150, xs: 75}, minWidth: '350px'}}>
+                Hi, I'm <b>Kit</b>
+              </Typography>
+                <TypeIt
+                  className="Typical"
+                  options={{ cursorChar: "|", loop: true }}
+                  getBeforeInit={(instance) => {
+                    instance
+                      .pause(1500)
+                      .type("A <b>Computer Science</b> Graduate 💻", {
+                        speed: 50,
+                        lifeLike: true,
+                      })
+                      .pause(1500)
+                      .delete(1)
+                      .pause(200)
+                      .type("with a Major in <b>Artifical Intelligence</b> 🤖", {
+                        speed: 40,
+                        lifeLike: true,
+                      })
+                      .pause(2500)
+                      .delete(1, { deleteSpeed: 15, lifeLike: true })
+                      .pause(200)
+                      .type("from The <b>University of Adelaide</b> 🏫", {
+                        speed: 40,
+                        lifeLike: true,
+                      })
+                      .pause(2500)
+                      .delete(98, { deleteSpeed: 5, lifeLike: true })
+                      .pause(200)
+                      .type("<b>Software Developer</b> 💻", {
+                        speed: 40,
+                        lifeLike: true,
+                      })
+                      .pause(2500)
+                      .delete(20, { deleteSpeed: 15, lifeLike: true })
+                      .pause(200)
+                      .type("<b>Volunteer</b> 🤚", { speed: 40 })
+                      .pause(2500)
+                      .delete(11, { deleteSpeed: 15, lifeLike: true })
+                      .pause(200)
+                      // .type("<b>Night Fill Assistant</b> 🛒", { speed: 40, lifeLike: true })
+                      // .pause(2500).delete(22, { deleteSpeed: 15 }).pause(400)
+                      .type("<b>Gym Junkie</b> 💪", { speed: 40, lifeLike: true })
+                      .pause(2500)
+                      .delete(null, { deleteSpeed: 15 })
+                      .pause(200);
 
-                  return instance;
-                }}
-              />
-            </div>
+                    return instance;
+                  }}
+                />
+            </Box>
             <Box
               component="img"
               alt="logo"
               src={profile_logo}
               className="Profile-logo"
-              sx={{mt: 8, ml: {xs: 45, xl: 30}}}
+              sx={{mt: {xl: 8, xs: 22}, ml: {xs: 45, xl: 30}, mr: {xs: 2, xl: 0}}}
             />
-          </header>
+          </Box>
           {/* <hr /> */}
           {/* <body className="Home-body">
                 <div className="LinkedIn">
@@ -350,7 +343,7 @@ export default function Default(props) {
               } */}
             </Box>
             { (props.page !== 'NA') ?
-              <Toolbar  sx={{ 
+              <Toolbar sx={{ 
                 top: 'auto', 
                 bottom: 0, 
                 height: 100, 

@@ -62,17 +62,19 @@ hr{
   justify-content: center;
   margin-left: 5vw;
   margin-right: 5vw;
-  margin-top: 6em;
+  /* margin-top: 6em; */
   margin-bottom: 3vw;
 }
 
-.Home-header span {
+.Home-header :is(span, p) {
   color: #226e93;
   font-family: Lato, sans-serif;
   font-weight: 300;
-  letter-spacing: 0.5px;
-  text-align: center;
-  font-size: calc(4px + 3.5vw);
+  text-align: left;
+}
+
+.Typeit div {
+  min-width: 350px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -88,14 +90,14 @@ hr{
     height: 69vh;
   } */
 
-  .Home-header span {
+  /* .Home-header span {
     color: #226e93;
     font-family: Lato, sans-serif;
     font-weight: 300;
     letter-spacing: 0.5px;
     text-align: center;
     font-size: calc(4px + 2.5vw);
-  }
+  } */
 
   .ks-loading {
     height: 50vw;
