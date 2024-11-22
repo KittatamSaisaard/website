@@ -32,10 +32,10 @@ const projectItems = [
 export default function Projects() {
 
   return (
-    <Box component="section" id="projects" sx={{backgroundColor: '#cccccc', p: 5, px: {lg: '15vw', xs: '0'}}}>
+    <Box component="section" id="projects" sx={{backgroundColor: '#cccccc', p: 5, pt: 10, px: {lg: '15vw', xs: '0'}}}>
       <Typography variant="h1" gutterBottom sx={{textAlign: 'center'}}>Projects</Typography>
       {projectItems.map((item) => (
-        <Card sx={{display: {md: 'block', xl: 'flex'}, flexDirection: 'row', m:10}}>
+        <Card sx={{display: {md: 'block', xl: 'flex'}, flexDirection: 'row', m: 10}}>
           <CardActionArea href={item.github} sx={{display: 'flex', justifyContent: 'center'}}target="_blank">
             <CardMedia
               component="img"

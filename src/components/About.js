@@ -11,28 +11,19 @@ export default function About() {
   }, []);
 
   return (
-    <Box component="section" id="about" sx={{textAlign: 'center', backgroundColor: '#f7f7f7', p: 5, px: {lg: '15vw', xs: '0'}}}>
-      <Typography variant="h1" gutterBottom>About me</Typography>
-      <Box component="div" className='about' sx={{backgroundColor: '#fff'}}>
-          <Typography variant="body2" id="bio" sx={{ color: 'text.secondary', fontSize: 20, textAlign: 'center' }}>
+    <Box component="section" id="about" sx={{textAlign: 'center', backgroundColor: '#f7f7f7', p: 5, pt: 10, px: {lg: 20, xs: 0}, mt: 15}}>
+      <Typography variant="h1" gutterBottom>About Me</Typography>
+      <Box component="div" className='about' sx={{backgroundColor: '#fff', m: {lg: 0, xs: 10}}}>
+          <Typography variant="body2" id="bio" sx={{ color: 'text.secondary', fontSize: 20, textAlign: 'center', m: 5}}>
           As a tech enthusiast passionate about solving complex problems, I thrive at the intersection of curiosity and innovation. With experience in software development and emerging technologies, I focus on creating user-centric applications that enhance efficiency and push boundaries. I’m committed to continuous learning, fostering collaboration, and building solutions that make a meaningful impact.
           <br></br><br></br>
           When I’m not coding or brainstorming ideas, you’ll find me solving Rubik’s cubes, exploring new trails, or diving into the latest tech trends. Let’s connect, collaborate and shape the future of technology together!
           </Typography>
       </Box>
-      <br></br>
-      <Box sx={{backgroundColor: '#fff', p: {xs: 1, xl: 5}, pb: {xs: 5}, pt: {xs: 4}, textAlign: 'center', display: 'flex', flexDirection: {xs: 'column', xl: 'row'}, justifyContent: 'center'}}>
+      <Box sx={{backgroundColor: '#fff', p: {xs: 1, xl: 2}, pb: {xs: 5}, pt: {xs: 1}, textAlign: 'center', display: 'flex', flexDirection: {xs: 'column', xl: 'row'}, justifyContent: 'center', ml: {xs: 10, xl: 0}, mr: {xs: 10, xl: 0}, mt: 15, mb: 10}}>
             <Typography color="primary" variant="h3" sx={{m: {xs: 2, xl: '65px'}}}>Connect with me on LinkedIn</Typography>
             <Box component="img" border="0" src={linkedIn_logo} alt="LinkedIn Logo" onClick = {() => window.open('https://www.linkedin.com/in/kittatam-saisaard/', '_blank')} sx={{cursor: 'pointer'}}/>
       </Box>
-      {/* <Box component="div" className='about' sx={{backgroundColor: '#fff'}}>
-        <div className="LinkedIn">
-          <p>Connect with me on LinkedIn</p>
-          <a href="https://www.linkedin.com/in/kittatam-saisaard/" target="react/jsx-no-target-blank">
-            <img border="0" src={linkedIn_logo} className="LinkedIn-logo" alt="LinkedIn Logo" />
-          </a>
-        </div>
-      </Box> */}
     </Box>
   );
 }

@@ -167,6 +167,7 @@ export default function Default(props) {
           <header className="Home-header">
             <Particles
               className="particles"
+              style={{ 'padding-bottom': '5'}}
               params={{
                 fpsLimit: 30,
                 background: {
@@ -319,7 +320,7 @@ export default function Default(props) {
                 <Experience/>
                 <Education/> */}
           <Container maxWidth={false} style={{ padding: '0'}}>
-            <Box component="main" /*sx={{ p: props.page === undefined ? 3 : 0}}*/>
+            <Box component="main"/*sx={{ p: props.page === undefined ? 3 : 0}}*/>
               <About/>
               <Projects/>
               <Contact />
