@@ -11,7 +11,6 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
@@ -23,25 +22,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Home from './Home';
 import Container from '@mui/material/Container';
-import SearchIcon from '@mui/icons-material/Search';
-import MoreIcon from '@mui/icons-material/MoreVert';
 
 import About from './About';
-import Experience from './Experience';
-import Education from './Education';
-import NotFound from './NotFound';
 import Projects from './Projects';
-import Contact from './Contact';
 
 import profile_logo from "../images/profile_pic.png";
-import linkedIn_logo from "../images/linkedIn_logo.png";
-import github_logo from "../images/github_logo.png";
-import ks_loading_once from "../images/ks-loading-once.gif";
 import TypeIt from "typeit-react";
 import Particles from "react-tsparticles";
-import FadeIn from "react-fade-in";
 
 const drawerWidth = 400;
 const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/, /*'Contact'*/];

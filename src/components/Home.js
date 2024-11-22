@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import profile_logo from "../images/profile_pic.png";
-import linkedIn_logo from "../images/linkedIn_logo.png";
-import github_logo from "../images/github_logo.png";
 import ks_loading_once from "../images/ks-loading-once.gif";
 import TypeIt from "typeit-react";
 import Particles from "react-tsparticles";

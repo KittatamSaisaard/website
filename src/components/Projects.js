@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import '../css/Projects.css';
 import github_logo from "../images/github_logo.png";
 import Box from '@mui/material/Box';
@@ -15,9 +15,9 @@ import Typography from '@mui/material/Typography';
 
 const projectItems = [
 {"image": lights_out_game_pic, "title": "Lights Out", "github": "https://github.com/KittatamSaisaard/Lights-Out",
-  "description": "Lights Out Mobile Game made using Unity 3D and C#.\
-          To win the game, the user must turn all of the lights off by having all tiles be white.\
-          When a user taps on a tile, the current and adjacent tiles (top, left, bottom, right) will turn off or on based on the current state the current tile is in. For example, if the current tile is on and a user taps on it, the current and adjacent tiles will turn off."
+  "description": "Lights Out Mobile Game made using Unity 3D and C#.\n" +
+          "To win the game, the user must turn all of the lights off by having all tiles be white.\n" +
+          "When a user taps on a tile, the current and adjacent tiles (top, left, bottom, right) will turn off or on based on the current state the current tile is in. For example, if the current tile is on and a user taps on it, the current and adjacent tiles will turn off."
 }
 ,
 {
