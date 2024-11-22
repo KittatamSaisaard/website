@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../css/About.css';
 import Box from '@mui/material/Box';
 import linkedIn_logo from "../images/linkedIn_logo.png";

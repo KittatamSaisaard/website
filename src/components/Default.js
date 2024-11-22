@@ -91,15 +91,15 @@ export default function Default(props) {
     </Box>
   );
 
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     document.body.style.backgroundColor = "transparent";
-    const loading_time = 1660 + 250;
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, loading_time);
+    // const loading_time = 1660 + 250;
+    // setLoading(true);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, loading_time);
   }, []);
 
   return (
