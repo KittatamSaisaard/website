@@ -48,7 +48,7 @@ const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/
 
 const Copyright = () => {
   return (
-    <Typography color="white" fontSize="1em">
+    <Typography sx={{color:'white', fontSize: 30}}>
       {'Copyright © Kittatam Saisaard '}
       {new Date().getFullYear()}
       {'.'}
@@ -344,9 +344,17 @@ export default function Default(props) {
               } */}
             </Box>
             { (props.page !== 'NA') ?
-              <Toolbar sx={{ top: 'auto', bottom: 0 }} style={{ background: '#414245' }}>
+              <Toolbar  sx={{ 
+                top: 'auto', 
+                bottom: 0, 
+                height: 100, 
+                background: '#414245', 
+                display: 'flex', 
+                justifyContent: 'center', 
+                alignItems: 'center' 
+              }}>
                 <Copyright  />
-                <Box sx={{ flexGrow: 1 }} />
+                {/* <Box sx={{ flexGrow: 1 }} /> */}
                 {/* <IconButton color="inherit">
                   <SearchIcon />
                 </IconButton>
