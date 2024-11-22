@@ -116,7 +116,7 @@ export default function Default(props) {
       ) : ( */}
         <React.Fragment>
         {/* <FadeIn transitionDuration={2000} delay={250}> */}
-        <AppBar component="nav" style={{ background: '#414245', height: '3.75em'}}>
+        <AppBar component="nav" style={{ background: '#414245', height: '5.75em'}}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -131,7 +131,7 @@ export default function Default(props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{flexGrow: { xs: '0', sm: '1' }, textAlign: { xs: 'center', sm: 'left' }, "&:hover" : {cursor: "pointer"}}}
+            sx={{fontSize: 35, flexGrow: { xs: '0', sm: '1' }, textAlign: { xs: 'center', sm: 'left' }, "&:hover" : {cursor: "pointer"}}}
             onClick={() => handleNavigatePage("Home")}
           >
             Kittatam Saisaard
@@ -139,11 +139,11 @@ export default function Default(props) {
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               item !== 'Home' ?
-                <Button key={item} sx={{ color: '#fff' }} href={"#"+item.toLowerCase()} /*onClick={() => handleNavigatePage(item)}*/>
+                <Button key={item} sx={{color: '#fff', fontSize: 20, px: 3 }} href={"#"+item.toLowerCase()} /*onClick={() => handleNavigatePage(item)}*/>
                   {item}
                 </Button>
               :
-                <Button key={item} sx={{ color: '#fff' }} onClick={() => handleNavigatePage("Home")}>
+                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: 3 }} onClick={() => handleNavigatePage("Home")}>
                   {item}
                 </Button>
             ))}

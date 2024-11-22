@@ -14,21 +14,7 @@ export default function Contact() {
   }, []);
 
   return (
-    // <Box component="section" id="contact" sx={{backgroundColor: '#cccccc', p: 5, px: {lg: '15vw', xs: '0'}}}>
-    //   <Box component="div" className='contact' sx={{backgroundColor: '#fff'}}>
-    //   <h1>Contact</h1>
-    //   <span style={{ textAlign: 'center' }}>
-    //     <span h1 style={{color: '#396980'}}>
-    //       Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
-    //     </span>
-    //   </span>
-    //   </Box>
-    //   <br></br>
-    //   <Box component="div" className='contact' sx={{backgroundColor: '#fff'}}>
-
-    //   </Box>
-    // </Box>
-    <Box component="section" id="contact" sx={{textAlign: 'center'}}> 
+    <Box component="section" id="contact" sx={{py: 15, textAlign: 'center'}}> 
      <Typography variant="h1" gutterBottom>Contact Me</Typography>
      <Typography variant="body2" color="textSecondary" component="p" align="center" gutterBottom sx={{ marginBottom: 2}}>
           Feel free to Contact me by submitting the form below and I will get back to you as soon as possible

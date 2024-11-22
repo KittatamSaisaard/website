@@ -11,7 +11,7 @@ export default function About() {
   }, []);
 
   return (
-    <Box component="section" id="about" sx={{textAlign: 'center', backgroundColor: '#f7f7f7', p: 5, pt: 10, px: {lg: 20, xs: 0}, mt: 15}}>
+    <Box component="section" id="about" sx={{textAlign: 'center', backgroundColor: '#f7f7f7', p: 5, pt: 15, px: {lg: 20, xs: 0}, mt: 15}}>
       <Typography variant="h1" gutterBottom>About Me</Typography>
       <Box component="div" className='about' sx={{backgroundColor: '#fff', m: {lg: 0, xs: 10}}}>
           <Typography variant="body2" id="bio" sx={{ color: 'text.secondary', fontSize: 20, textAlign: 'center', m: 5}}>
