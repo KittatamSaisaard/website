@@ -75,6 +75,14 @@ hr{
   font-size: calc(4px + 3.5vw);
 }
 
+@media only screen and (max-width: 600px) {
+
+  .KS_Logo {
+    margin-left: 0;
+  }
+
+}
+
 @media only screen and (max-width: 768px) {
   /* .Home-header{
     height: 69vh;
@@ -94,10 +102,6 @@ hr{
     width: 50vw;
   }
 
-  .KS_Logo {
-    margin-left: 2.5em;
-  }
-
   .Home-body {
     margin: 15vw 3vw 3vw 0vw !important;
     width: 100%;
@@ -105,6 +109,12 @@ hr{
 
   .GitHub p {
     width: auto !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .KS_Logo {
+    margin-left: 1vw;
   }
 }
 
@@ -177,3 +187,8 @@ hr{
 html {
   scroll-behavior: smooth;
 }
+
+/* #toolBarIcon {
+  width: 6em;
+  height: auto;
+} */

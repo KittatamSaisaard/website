@@ -43,7 +43,7 @@ import TypeIt from "typeit-react";
 import Particles from "react-tsparticles";
 import FadeIn from "react-fade-in";
 
-const drawerWidth = 240;
+const drawerWidth = 340;
 const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/, 'Contact'];
 
 const Copyright = () => {
@@ -75,24 +75,27 @@ export default function Default(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }} onClick={() => navigate("../", { replace: true })}>
+      {/* <Typography variant="h6" sx={{ my: 2 }} onClick={() => navigate("../", { replace: true })}>
         Kittatam Saisaard
       </Typography>
-      <Divider />
+      <Divider /> */}
       <List>
         {navItems.map((item) => (
           item !== 'Home' ?
           <ListItem key={item} component="a" class="drawerItem" href={"#"+item.toLowerCase()} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} /*onClick={() => handleNavigatePage(item)}*//>
+            <ListItemButton>
+              <ListItemText primary={item} primaryTypographyProps={{fontSize: 50}} class='test'/*onClick={() => handleNavigatePage(item)}*//>
             </ListItemButton>
+            <Divider sx={{ borderBottomWidth: 10 }}/>
           </ListItem>
           :
           <ListItem key={item} component="a" class="drawerItem" disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} onClick={() => handleNavigatePage("Home")}/>
+            <ListItemButton>
+              <ListItemText primary={item} primaryTypographyProps={{fontSize: 50}} onClick={() => handleNavigatePage("Home")}/>
             </ListItemButton>
+            <Divider sx={{ borderBottomWidth: 10 }}/>
           </ListItem>
+          
         ))}
       </List>
     </Box>
@@ -116,27 +119,18 @@ export default function Default(props) {
       ) : ( */}
         <React.Fragment>
         {/* <FadeIn transitionDuration={2000} delay={250}> */}
-        <AppBar component="nav" style={{ background: '#414245', height: '5.75em'}}>
+        <AppBar component="nav" style={{ background: '#414245', height: '5.75em', padding: '0'}}>
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Box component="img" src={ks_logo} class="KS_Logo" alt="KS_Logo" onClick={() => handleNavigatePage("Home")}/>
           <Typography
             variant="h6"
             component="div"
-            sx={{fontSize: 35, flexGrow: { xs: '0', sm: '1' }, textAlign: { xs: 'center', sm: 'left' }, "&:hover" : {cursor: "pointer"}}}
+            sx={{fontSize: 35, flexGrow: { xs: '1', sm: '1' }, textAlign: { xs: 'center', sm: 'left' }, "&:hover" : {cursor: "pointer"}}}
             onClick={() => handleNavigatePage("Home")}
           >
             Kittatam Saisaard
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', sm: 'block' }}}>
             {navItems.map((item) => (
               item !== 'Home' ?
                 <Button key={item} sx={{color: '#fff', fontSize: 20, px: 3 }} href={"#"+item.toLowerCase()} /*onClick={() => handleNavigatePage(item)}*/>
@@ -148,10 +142,21 @@ export default function Default(props) {
                 </Button>
             ))}
           </Box>
+          <IconButton
+            id="toolBarIcon"
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' }, m: 1}}
+          >
+            <MenuIcon sx={{fontSize: 70}}/>
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Drawer
         variant="temporary"
+        anchor='right'
         open={mobileOpen}
         onClose={handleDrawerToggle}
         ModalProps={{
