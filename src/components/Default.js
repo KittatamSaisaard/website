@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import ks_logo from '../images/ks_logo.png';
 import '../css/Home.css';
 import '../css/About.css';
@@ -54,14 +54,19 @@ export default function Default(props) {
     setMobileOpen((prevState) => !prevState);
   };
 
-  let navigate = useNavigate(); 
+  // let navigate = useNavigate(); 
   const handleNavigatePage = (path) => {
-      if (path !== 'Home'){
-        navigate("../#" + path.toLowerCase(), { replace: true });
-      } else {
-        navigate("../", { replace: true });
-        window.scrollTo(0, 0);
-      }
+      // if (path !== 'Home'){
+      //   navigate("../#" + path.toLowerCase(), { replace: true });
+      // } else {
+      //   navigate("../", { replace: true });
+      //   window.scrollTo(0, 0);
+      // }
+
+      // if(path === "Home"){
+      //   document.location.href="/";
+      //   window.scrollTo(0, 0);
+      // }
   };
 
   const drawer = (
@@ -124,7 +129,7 @@ export default function Default(props) {
           <Box sx={{ display: { xs: 'none', sm: 'block' }}}>
             {navItems.map((item) => (
               item === 'Home' ?
-                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: 3 }} onClick={() => handleNavigatePage("Home")}>
+                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: 3 }} href={"/"}/*onClick={() => handleNavigatePage("Home")}*/>
                   {item}
                 </Button>
               :
