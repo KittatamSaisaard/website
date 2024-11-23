@@ -26,7 +26,7 @@ import Container from '@mui/material/Container';
 
 import About from './About';
 import Projects from './Projects';
-import Contact from './Contact';
+// import Contact from './Contact';
 
 import profile_logo from "../images/profile_pic.png";
 // import ks_loading_once from "../images/ks-loading-once.gif";
