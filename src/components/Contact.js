@@ -41,13 +41,14 @@ export default function Contact() {
               </Grid>
             </Grid>
           </form> */}
-          <form name="contact" method="post" data-netlify="true" onSubmit="submit">
+          <form name="contact" method="post">
+            <input type="hidden" name="form-name" value="contact" />
             <p>
-              <label>Name <input type="text" name="name" /></label>
+              <label>Your Name: <input type="text" name="name"/></label>
             </p>
             <p>
-              <label>Email <input type="email" name="email" /></label>
-            </p>  
+              <label>Your Email: <input type="email" name="email"/></label>
+            </p>
             <p>
               <label>Message: <textarea name="message"></textarea></label>
             </p>
