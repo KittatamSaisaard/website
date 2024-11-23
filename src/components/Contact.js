@@ -25,7 +25,7 @@ export default function Contact() {
           {/* <Typography gutterBottom variant="h5">
             Contact Me
         </Typography>  */}
-          <form>
+          <form name="contact" method="POST" data-netlify="true">
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
@@ -39,7 +39,6 @@ export default function Contact() {
               <Grid item xs={12}>
                 <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
               </Grid>
-
             </Grid>
           </form>
         </CardContent>
