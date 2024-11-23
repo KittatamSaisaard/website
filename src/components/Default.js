@@ -63,10 +63,10 @@ export default function Default(props) {
       //   window.scrollTo(0, 0);
       // }
 
-      // if(path === "Home"){
-      //   document.location.href="/";
-      //   window.scrollTo(0, 0);
-      // }
+      if(path === "Home"){
+        document.location.href="/";
+        window.scrollTo(0, 0);
+      }
   };
 
   const drawer = (
