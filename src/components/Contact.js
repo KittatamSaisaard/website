@@ -41,7 +41,7 @@ export default function Contact() {
               </Grid>
             </Grid>
           </form> */}
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="post" data-netlify="true" onSubmit="submit">
             <p>
               <label>Name <input type="text" name="name" /></label>
             </p>
