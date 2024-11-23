@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom'
 import Default from './components/Default';
 // import Education from './components/Education';
 // import About from './components/About';
-import NotFound from './components/NotFound';
+// import NotFound from './components/NotFound';
 // import REC from './components/Retail-Earnings-Calculator';
 
 ReactDOM.render(
