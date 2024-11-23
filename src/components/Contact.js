@@ -4,8 +4,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import {Card, CardContent} from '@mui/material';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+// import TextField from '@mui/material/TextField';
+// import Button from '@mui/material/Button';
 
 export default function Contact() {
 
@@ -25,7 +25,7 @@ export default function Contact() {
           {/* <Typography gutterBottom variant="h5">
             Contact Me
         </Typography>  */}
-          <form name="contact" method="POST" data-netlify="true">
+          {/* <form name="contact" method="POST" data-netlify="true">
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
@@ -40,6 +40,26 @@ export default function Contact() {
                 <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
               </Grid>
             </Grid>
+          </form> */}
+          <form name="contact" method="POST" data-netlify="true">
+            <p>
+              <label>Your Name: <input type="text" name="name" /></label>
+            </p>
+            <p>
+              <label>Your Email: <input type="email" name="email" /></label>
+            </p>
+            <p>
+              <label>Your Role: <select name="role[]" multiple>
+                <option value="leader">Leader</option>
+                <option value="follower">Follower</option>
+              </select></label>
+            </p>
+            <p>
+              <label>Message: <textarea name="message"></textarea></label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
           </form>
         </CardContent>
       </Card>
