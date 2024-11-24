@@ -4,8 +4,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import {Card, CardContent} from '@mui/material';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+// import TextField from '@mui/material/TextField';
+// import Button from '@mui/material/Button';
 
 export default function Contact() {
 
@@ -25,7 +25,7 @@ export default function Contact() {
           {/* <Typography gutterBottom variant="h5">
             Contact Me
         </Typography>  */}
-          <form name="contact" method="post">
+          {/* <form name="contact" method="post">
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField name="name" type="text" placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
@@ -40,7 +40,7 @@ export default function Contact() {
                 <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
               </Grid>
             </Grid>
-          </form>
+          </form> */}
           {/* <form name="contact" method="post">
             <input type="hidden" name="form-name" value="contact" />
             <p>
