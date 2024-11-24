@@ -25,10 +25,10 @@ export default function Contact() {
           {/* <Typography gutterBottom variant="h5">
             Contact Me
         </Typography>  */}
-          <form name="contact" method="POST">
+          <form name="contact" method="post">
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <TextField name="name" placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
+                <TextField name="name" type="text" placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
               </Grid>
               <Grid item xs={12}>
                 <TextField name="email" type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
