@@ -4,8 +4,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import {Card, CardContent} from '@mui/material';
-// import TextField from '@mui/material/TextField';
-// import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 export default function Contact() {
 
@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <Box component="section" id="contact" sx={{py: 15, textAlign: 'center'}}> 
      <Typography variant="h1" gutterBottom>Contact Me</Typography>
-     <Typography variant="body2" color="textSecondary" component="p" align="center" gutterBottom sx={{ marginBottom: 2}}>
+     <Typography variant="body1" color="textSecondary" component="p" align="center" gutterBottom sx={{ marginBottom: 2}}>
           Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
         </Typography> 
     <Grid>
@@ -25,23 +25,23 @@ export default function Contact() {
           {/* <Typography gutterBottom variant="h5">
             Contact Me
         </Typography>  */}
-          {/* <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="POST">
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <TextField placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
+                <TextField name="name" placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
               </Grid>
               <Grid item xs={12}>
-                <TextField type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
+                <TextField name="email" type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
               </Grid>
               <Grid item xs={12}>
-                <TextField label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
+                <TextField name="message" label="Message" multiline rows={4} placeholder="Type your message here" variant="outlined" fullWidth required />
               </Grid>
               <Grid item xs={12}>
                 <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
               </Grid>
             </Grid>
-          </form> */}
-          <form name="contact" method="post">
+          </form>
+          {/* <form name="contact" method="post">
             <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>Your Name: <input type="text" name="name"/></label>
@@ -55,7 +55,7 @@ export default function Contact() {
             <p>
               <button type="submit">Send</button>
             </p>
-          </form>
+          </form> */}
         </CardContent>
       </Card>
     </Grid>
