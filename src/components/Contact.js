@@ -37,14 +37,11 @@ export default function Contact() {
     <Grid>
       <Card style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}>
         <CardContent>
-          {/* <Typography gutterBottom variant="h5">
-            Contact Me
-        </Typography>  */}
           <form name="contact" method="post" data-netlify="true" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact" />
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <TextField name="name" type="text" placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
+                <TextField name="name" type="text" placeholder="Enter name" label="Name" variant="outlined" fullWidth required />
               </Grid>
               <Grid item xs={12}>
                 <TextField name="email" type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required />
@@ -57,21 +54,6 @@ export default function Contact() {
               </Grid>
             </Grid>
           </form>
-          {/* <form name="contact" method="post">
-            <input type="hidden" name="form-name" value="contact" />
-            <p>
-              <label>Your Name: <input type="text" name="name"/></label>
-            </p>
-            <p>
-              <label>Your Email: <input type="email" name="email"/></label>
-            </p>
-            <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form> */}
         </CardContent>
       </Card>
     </Grid>
