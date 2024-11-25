@@ -13,6 +13,21 @@ export default function Contact() {
     document.body.style.backgroundColor = '#f2f2f2';
   }, []);
 
+  const handleSubmit = event => {
+    event.preventDefault();
+  
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+  
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch(error => alert(error));
+  };
+
   return (
     <Box component="section" id="contact" sx={{py: 15, textAlign: 'center'}}> 
      <Typography variant="h1" gutterBottom>Contact Me</Typography>
@@ -25,7 +40,7 @@ export default function Contact() {
           {/* <Typography gutterBottom variant="h5">
             Contact Me
         </Typography>  */}
-          <form name="contact" method="post" onsubmit="submit" netlify netlify-honeypot="bot-field">
+          <form name="contact" method="post" onsubmit="submit" data-netlify="true" onSubmit={handleSubmit}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField name="name" type="text" placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
