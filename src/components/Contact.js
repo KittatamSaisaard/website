@@ -4,8 +4,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import {Card, CardContent} from '@mui/material';
-// import TextField from '@mui/material/TextField';
-// import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 export default function Contact() {
 
@@ -41,7 +41,7 @@ export default function Contact() {
               </Grid>
             </Grid>
           </form> */}
-          {/* <form name="contact" method="post">
+          <form name="contact" method="post">
             <input type="hidden" name="form-name" value="contact" />
             <p>
               <label>Your Name: <input type="text" name="name"/></label>
@@ -55,7 +55,7 @@ export default function Contact() {
             <p>
               <button type="submit">Send</button>
             </p>
-          </form> */}
+          </form>
         </CardContent>
       </Card>
     </Grid>

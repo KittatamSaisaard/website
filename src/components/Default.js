@@ -26,7 +26,7 @@ import Container from '@mui/material/Container';
 
 import About from './About';
 import Projects from './Projects';
-// import Contact from './Contact';
+import Contact from './Contact';
 
 import profile_logo from "../images/profile_pic.png";
 // import ks_loading_once from "../images/ks-loading-once.gif";
@@ -323,7 +323,7 @@ export default function Default(props) {
             <Box component="main"/*sx={{ p: props.page === undefined ? 3 : 0}}*/>
               <About/>
               <Projects/>
-              {/* <Contact /> */}
+              <Contact />
               {/* {
               props.page ==="education"
               ? <Education/> 
