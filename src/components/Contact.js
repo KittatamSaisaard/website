@@ -41,6 +41,7 @@ export default function Contact() {
             Contact Me
         </Typography>  */}
           <form name="contact" method="post" data-netlify="true" onSubmit={handleSubmit}>
+          <input type="hidden" name="form-name" value="contact" />
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField name="name" type="text" placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
