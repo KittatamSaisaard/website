@@ -78,14 +78,14 @@ export default function Default(props) {
       <List>
         {navItems.map((item) => (
           item !== 'Home' ?
-          <ListItem key={item} component="a" class="drawerItem" href={"#"+item.toLowerCase()} disablePadding>
+          <ListItem key={item} component="a" className="drawerItem" href={"#"+item.toLowerCase()} disablePadding>
             <ListItemButton>
               <ListItemText primary={item} primaryTypographyProps={{fontSize: 70}} class='test'/*onClick={() => handleNavigatePage(item)}*//>
             </ListItemButton>
             <Divider sx={{ borderBottomWidth: 10 }}/>
           </ListItem>
           :
-          <ListItem key={item} component="a" class="drawerItem" disablePadding>
+          <ListItem key={item} component="a" className="drawerItem" disablePadding>
             <ListItemButton>
               <ListItemText primary={item} primaryTypographyProps={{fontSize: 70}} onClick={() => handleNavigatePage("Home")}/>
             </ListItemButton>
@@ -117,7 +117,7 @@ export default function Default(props) {
         {/* <FadeIn transitionDuration={2000} delay={250}> */}
         <AppBar component="nav" style={{ background: '#414245', height: '5.75em', padding: '0'}}>
         <Toolbar>
-          <Box component="img" src={ks_logo} class="KS_Logo" alt="KS_Logo" onClick={() => handleNavigatePage("Home")}/>
+          <Box component="img" src={ks_logo} className="KS_Logo" alt="KS_Logo" onClick={() => handleNavigatePage("Home")}/>
           <Typography
             variant="h6"
             component="div"
@@ -168,7 +168,7 @@ export default function Default(props) {
           <Box component="header" className="Home-header" sx={{mt: {xl: 12, xs: 0}}}>
             <Particles
               className="particles"
-              style={{ 'padding-bottom': '5'}}
+              style={{ 'paddingBottom': '5'}}
               params={{
                 fpsLimit: 30,
                 background: {

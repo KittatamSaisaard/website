@@ -24,7 +24,7 @@ export default function Contact() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString()
     })
-      .then(() => console.log("Form successfully submitted"))
+      .then(() => console.log(formData))
       .catch(error => alert(error));
   };
 
@@ -40,7 +40,7 @@ export default function Contact() {
           {/* <Typography gutterBottom variant="h5">
             Contact Me
         </Typography>  */}
-          <form name="contact" method="post" onsubmit="submit" data-netlify="true" onSubmit={handleSubmit}>
+          <form name="contact" method="post" data-netlify="true" onSubmit={handleSubmit}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField name="name" type="text" placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
