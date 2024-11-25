@@ -25,7 +25,7 @@ export default function Contact() {
           {/* <Typography gutterBottom variant="h5">
             Contact Me
         </Typography>  */}
-          <form name="contact" method="post" netlify>
+          <form name="contact" method="post" onsubmit="submit" netlify netlify-honeypot="bot-field">
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField name="name" type="text" placeholder="Enter first name" label="First Name" variant="outlined" fullWidth required />
