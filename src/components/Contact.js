@@ -50,7 +50,7 @@ export default function Contact() {
                 <TextField name="message" label="Message" multiline rows={8} placeholder="Type your message here" variant="outlined" fullWidth required inputProps={{maxLength: 1000}}/>
               </Grid>
               <Grid item xs={12}>
-                <Button type="submit" variant="contained" color="primary" fullWidth>Submit</Button>
+                <Button type="submit" variant="contained" color="primary" fullWidth sx={{fontSize: {xl: 20, xs: 60}}}>Submit</Button>
               </Grid>
             </Grid>
           </form>
