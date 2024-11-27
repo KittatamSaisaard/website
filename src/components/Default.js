@@ -121,7 +121,7 @@ export default function Default(props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{fontSize: {xs:'1.65rem', sm:35}, flexGrow: 1, textAlign: { xs: 'center', md: 'left' }, "&:hover" : {cursor: "pointer"}}}
+            sx={{fontSize: {xs:'1.35rem', sm:35}, flexGrow: 1, textAlign: { xs: 'center', md: 'left' }, "&:hover" : {cursor: "pointer"}}}
             onClick={() => handleNavigatePage("Home")}
           >
             Kittatam Saisaard
