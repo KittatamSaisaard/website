@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import {Card, CardContent} from '@mui/material';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { useMediaQuery } from '@mui/material';
 
 export default function Contact() {
 
@@ -28,8 +29,15 @@ export default function Contact() {
       .catch(error => alert(error));
   };
 
+    // Detect screen size
+    const isExtraSmallScreen = useMediaQuery('(max-width: 600px)'); // Adjust for xs screen size
+    const isExtraLargeScreen = useMediaQuery('(min-width: 1200px)'); // Adjust for xl screen size
+  
+    // Determine the number of rows based on the screen size
+    const rows = isExtraSmallScreen ? 8 : isExtraLargeScreen ? 6 : 6; // Default to 6 rows for other sizes
+
   return (
-    <Box component="section" id="contact" sx={{my: 12, textAlign: 'center'}}> 
+    <Box component="section" id="contact" sx={{mb: {xs: 20, lg: 5}, pt: {xs: 10, lg: 5}, textAlign: 'center'}}> 
      <Typography variant="h1" gutterBottom>Contact Me</Typography>
      <Typography variant="h5" color="textSecondary" component="p" align="center" gutterBottom sx={{ marginBottom: 10, mx: {lg: 0, xs: 20}}}>
           Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
@@ -47,7 +55,7 @@ export default function Contact() {
                 <TextField name="email" type="email" placeholder="Enter email" label="Email" variant="outlined" fullWidth required inputProps={{maxLength: 100}}/>
               </Grid>
               <Grid item xs={12}>
-                <TextField name="message" label="Message" multiline rows={8} placeholder="Type your message here" variant="outlined" fullWidth required inputProps={{maxLength: 1000}}/>
+                <TextField name="message" label="Message" multiline rows={rows} placeholder="Type your message here" variant="outlined" fullWidth required inputProps={{maxLength: 1000}}/>
               </Grid>
               <Grid item xs={12}>
                 <Button type="submit" variant="contained" color="primary" fullWidth sx={{fontSize: {xl: 20, xs: 60}}}>Submit</Button>
