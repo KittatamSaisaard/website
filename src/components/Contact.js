@@ -38,7 +38,7 @@ export default function Contact() {
           Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
         </Typography> 
     <Grid sx={{mx: {lg: 45, xs: 2}}}>
-      <Card style={{padding: "0 5px 0 5px", margin: "0 auto" }}>
+      <Card style={{padding: "0 5px 0 5px", margin: "0 auto" }} sx={{backgroundColor: '#f7f7f7'}}>
         <CardContent>
           <form name="contact" method="post" data-netlify="true" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact" />
