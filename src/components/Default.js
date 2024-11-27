@@ -64,10 +64,8 @@ export default function Default(props) {
       // }
 
       if(path === "Home"){
-        window.scrollTo(0, 0);
         document.location.href="/";
-      } else if(path === "Contact"){
-        window.scrollTo(0, Math.max(document.body.scrollHeight, document.documentElement.scrollHeight));
+        window.scrollTo(0, 0);
       }
   };
 
@@ -130,19 +128,14 @@ export default function Default(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' }}}>
             {navItems.map((item) => (
-              item === 'Home' ? (
-                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: 3 }} href="/">
+              item === 'Home' ?
+                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: 3 }} href={"/"}/*onClick={() => handleNavigatePage("Home")}*/>
                   {item}
                 </Button>
-              ) : item === 'Contact' ? (
-                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: 3 }} onClick={() => handleNavigatePage('Contact')}>
+              :
+                <Button key={item} sx={{color: '#fff', fontSize: 20, px: 3, }} href={"#"+item.toLowerCase()}>
                   {item}
                 </Button>
-              ) : (
-                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: 3 }} href={`#${item.toLowerCase()}`}>
-                  {item}
-                </Button>
-              )
             ))}
           </Box>
           <IconButton
