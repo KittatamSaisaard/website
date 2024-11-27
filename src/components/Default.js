@@ -34,12 +34,12 @@ import TypeIt from "typeit-react";
 import Particles from "react-tsparticles";
 // import FadeIn from 'react-fade-in';
 
-const drawerWidth = 400;
+const drawerWidth = 150;
 const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/, 'Contact'];
 
 const Copyright = () => {
   return (
-    <Typography sx={{color:'white', fontSize: 30}}>
+    <Typography sx={{color:'white', fontSize: 22}}>
       {'Copyright © Kittatam Saisaard '}
       {new Date().getFullYear()}
       {'.'}
@@ -80,14 +80,14 @@ export default function Default(props) {
           item !== 'Home' ?
           <ListItem key={item} component="a" className="drawerItem" href={"#"+item.toLowerCase()} disablePadding>
             <ListItemButton>
-              <ListItemText primary={item} primaryTypographyProps={{fontSize: 70}} class='test'/*onClick={() => handleNavigatePage(item)}*//>
+              <ListItemText primary={item} primaryTypographyProps={{fontSize: 30}} class='test'/*onClick={() => handleNavigatePage(item)}*//>
             </ListItemButton>
             <Divider sx={{ borderBottomWidth: 10 }}/>
           </ListItem>
           :
           <ListItem key={item} component="a" className="drawerItem" disablePadding>
             <ListItemButton>
-              <ListItemText primary={item} primaryTypographyProps={{fontSize: 70}} onClick={() => handleNavigatePage("Home")}/>
+              <ListItemText primary={item} primaryTypographyProps={{fontSize: 30}} onClick={() => handleNavigatePage("Home")}/>
             </ListItemButton>
             <Divider sx={{ borderBottomWidth: 10 }}/>
           </ListItem>
@@ -121,19 +121,19 @@ export default function Default(props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{fontSize: 35, flexGrow: { xs: '1', sm: '1' }, textAlign: { xs: 'center', sm: 'left' }, "&:hover" : {cursor: "pointer"}}}
+            sx={{fontSize: {xs:'1.65rem', sm:35}, flexGrow: 1, textAlign: { xs: 'center', md: 'left' }, "&:hover" : {cursor: "pointer"}}}
             onClick={() => handleNavigatePage("Home")}
           >
             Kittatam Saisaard
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' }}}>
+          <Box sx={{ display: { xs: 'none', md: 'block' }}}>
             {navItems.map((item) => (
               item === 'Home' ?
-                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: 3 }} href={"/"}/*onClick={() => handleNavigatePage("Home")}*/>
+                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: {xl:3, md:1} }} href={"/"}/*onClick={() => handleNavigatePage("Home")}*/>
                   {item}
                 </Button>
               :
-                <Button key={item} sx={{color: '#fff', fontSize: 20, px: 3, }} href={"#"+item.toLowerCase()}>
+                <Button key={item} sx={{color: '#fff', fontSize: 20, px: {xl:3, md:1} }} href={"#"+item.toLowerCase()}>
                   {item}
                 </Button>
             ))}
@@ -144,7 +144,7 @@ export default function Default(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' }, m: 1}}
+            sx={{ mr: 2, display: { md: 'none' }, m: 1}}
           >
             <MenuIcon sx={{fontSize: 70}}/>
           </IconButton>
@@ -159,16 +159,15 @@ export default function Default(props) {
           keepMounted: true, // Better open performance on mobile.
         }}
         sx={{
-          display: { xs: 'block', sm: 'none' },
+          display: { xs: 'block', md: 'none' },
           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
         }}
       >
         {drawer}
       </Drawer>
-          <Box component="header" className="Home-header" sx={{mt: {xl: 12, xs: 0}}}>
+          <Box component="header" className="Home-header" sx={{mt: {xl: 12, xs: 0}, pb:5 ,position: 'relative', overflow: 'hidden'}}>
             <Particles
               className="particles"
-              style={{ 'paddingBottom': '5'}}
               params={{
                 fpsLimit: 30,
                 background: {
@@ -236,8 +235,8 @@ export default function Default(props) {
                 },
               }}
             />
-            <Box className="Typeit" sx={{fontSize: {xl: 50, xs: 30}, ml: 5}}>
-              <Typography sx={{fontSize: {xl: 150, xs: 75}, minWidth: '350px'}}>
+            <Box className="Typeit" sx={{fontSize: {xs: 15, sm: 20, md: 25, xl: 50}, pl: 2, mt: {xs:10}}}>
+              <Typography sx={{fontSize: {xs: 30, sm: 50, md: 80, xl: 135,}, minWidth: '450px'}}>
                 Hi, I'm <b>Kit</b>
               </Typography>
                 <TypeIt
@@ -245,43 +244,43 @@ export default function Default(props) {
                   options={{ cursorChar: "|", loop: true }}
                   getBeforeInit={(instance) => {
                     instance
-                      .pause(1500)
+                      .pause(750)
                       .type("A <b>Computer Science</b> Graduate 💻", {
                         speed: 50,
                         lifeLike: true,
                       })
-                      .pause(1500)
+                      .pause(750)
                       .delete(1)
                       .pause(200)
                       .type("with a Major in <b>Artifical Intelligence</b> 🤖", {
                         speed: 40,
                         lifeLike: true,
                       })
-                      .pause(2500)
+                      .pause(750)
                       .delete(1, { deleteSpeed: 15, lifeLike: true })
                       .pause(200)
                       .type("from The <b>University of Adelaide</b> 🏫", {
                         speed: 40,
                         lifeLike: true,
                       })
-                      .pause(2500)
+                      .pause(1000)
                       .delete(98, { deleteSpeed: 5, lifeLike: true })
                       .pause(200)
                       .type("<b>Software Developer</b> 💻", {
                         speed: 40,
                         lifeLike: true,
                       })
-                      .pause(2500)
+                      .pause(750)
                       .delete(20, { deleteSpeed: 15, lifeLike: true })
                       .pause(200)
                       .type("<b>Volunteer</b> 🤚", { speed: 40 })
-                      .pause(2500)
+                      .pause(750)
                       .delete(11, { deleteSpeed: 15, lifeLike: true })
                       .pause(200)
                       // .type("<b>Night Fill Assistant</b> 🛒", { speed: 40, lifeLike: true })
                       // .pause(2500).delete(22, { deleteSpeed: 15 }).pause(400)
-                      .type("<b>Gym Junkie</b> 💪", { speed: 40, lifeLike: true })
-                      .pause(2500)
+                      .type("<b>Speedcuber</b> 🧩", { speed: 40, lifeLike: true })
+                      .pause(750)
                       .delete(null, { deleteSpeed: 15 })
                       .pause(200);
 
@@ -294,49 +293,14 @@ export default function Default(props) {
               alt="logo"
               src={profile_logo}
               className="Profile-logo"
-              sx={{mt: {xl: 8, xs: 22}, ml: {xs: 45, xl: 30}, mr: {xs: 2, xl: 0}}}
+              sx={{maxWidth: {xs:400, sm:500, md:400, lg: 1000}, ml: {xs:5}, mt: {xs: 14, xl: 8}, mr: {xs: 2, xl: 0}}}
             />
           </Box>
-          {/* <hr /> */}
-          {/* <body className="Home-body">
-                <div className="LinkedIn">
-                    <p>
-                    Connect with me on LinkedIn
-                    </p>
-                    <a href="https://www.linkedin.com/in/kittatam-saisaard/" target="react/jsx-no-target-blank">
-                    <img border="0" src={linkedIn_logo} className="LinkedIn-logo" alt="LinkedIn Logo" />
-                    </a>
-                </div>
-                <div className="GitHub">
-                    <p>
-                    Follow me on GitHub
-                    </p>
-                    <a href="https://github.com/KittatamSaisaard" target="react/jsx-no-target-blank">
-                    <img border="0" src={github_logo} className="GitHub-logo" alt="GitHub Logo" />
-                    </a>
-                </div>
-                </body> */}
-          {/* <About/>
-                <Experience/>
-                <Education/> */}
           <Container maxWidth={false} style={{ padding: '0'}}>
-            <Box component="main"/*sx={{ p: props.page === undefined ? 3 : 0}}*/>
+            <Box component="main">
               <About/>
               <Projects/>
               <Contact />
-              {/* {
-              props.page ==="education"
-              ? <Education/> 
-              : props.page ==="about"
-              ? <About id='about'/>
-              : props.page ==="experience"
-              ? <Experience/>
-              : props.page ==="projects"
-              ? <Projects/>
-              : props.page ==="404"
-              ? <NotFound/>
-              : null//<Home/>
-              } */}
             </Box>
             { (props.page !== 'NA') ?
               <Toolbar sx={{ 
@@ -348,14 +312,7 @@ export default function Default(props) {
                 justifyContent: 'center', 
                 alignItems: 'center' 
               }}>
-                <Copyright  />
-                {/* <Box sx={{ flexGrow: 1 }} /> */}
-                {/* <IconButton color="inherit">
-                  <SearchIcon />
-                </IconButton>
-                <IconButton color="inherit">
-                  <MoreIcon />
-                </IconButton> */}
+                <Copyright/>
               </Toolbar>
               : null
             }

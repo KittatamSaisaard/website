@@ -33,15 +33,15 @@ export default function Projects() {
 
   return (
     <Box component="section" id="projects" sx={{backgroundColor: '#cccccc', p: 5, pt: 15, px: {lg: '15vw', xs: '0'}}}>
-      <Typography variant="h1" gutterBottom sx={{textAlign: 'center'}}>Projects</Typography>
+      <Typography gutterBottom sx={{textAlign: 'center', typography: {xs: 'h2', lg: 'h1'}, mb: {lg: 6, xs: 4}}}>Projects</Typography>
       {projectItems.map((item) => (
-        <Card sx={{display: {md: 'block', xl: 'flex'}, flexDirection: 'row', m: 10}}>
+        <Card sx={{display: {md: 'block', xl: 'flex'}, flexDirection: 'row', m: 2, mb: {sx: 4, md: 8}}}>
           <CardActionArea href={item.github} sx={{display: 'flex', justifyContent: 'center'}}target="_blank">
             <CardMedia
               component="img"
-              sx={{margin: 0, 
-                height: item.title === "Earnings Calculator" ? 420 : '100%', width: item.title === "Earnings Calculator" ? 835 : '100%',
-                maxWidth: {xl: '732px'}
+              sx={{
+                margin: 0, 
+                height: '100%'
               }}
               image={item.image}
               title={item.title}
@@ -51,17 +51,17 @@ export default function Projects() {
             <Typography gutterBottom variant="h5"s component="div" sx={{fontSize: 40}}>
               {item.title}
             </Typography>
-            <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: 20 }}>
+            <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: {xs: 15, md: 20} }}>
             {item.description}
             </Typography>
             <CardActions sx={{paddingLeft:0, marginTop: 1}}>
-              <Button size="small" variant="contained" href={item.github} target="_blank" sx={{fontSize: {xl: 20, xs: 30}}}>Github</Button>
+              <Button size="small" variant="contained" href={item.github} target="_blank" sx={{fontSize: 20}}>Github</Button>
             </CardActions>
           </CardContent>
         </Card>))}
 
-      <Box sx={{backgroundColor: '#fff', p: {xs: 2, xl: 5}, textAlign: 'center', display: 'flex', flexDirection: {xs: 'column', xl: 'row'}, justifyContent: 'center', m: 10}}>
-            <Typography color="primary" variant="h3" sx={{m: {xs: 2, xl: '65px'}}}>Check out more projects on GitHub!</Typography>
+      <Box sx={{backgroundColor: '#fff', p: {xs: 2, xl: 5}, textAlign: 'center', display: 'flex', flexDirection: {xs: 'column', xl: 'row'}, justifyContent: 'center', m: 2}}>
+            <Typography color="primary" sx={{m: {xs: 2, xl: '65px'}, typography: {xs: 'h5', sm: 'h2'}}}>Check out more projects on GitHub!</Typography>
             <Box component="img" border="0" src={github_logo} alt="GitHub Logo" onClick = {() => window.open('https://github.com/KittatamSaisaard', '_blank')} sx={{cursor: 'pointer'}}/>
       </Box>
     </Box>

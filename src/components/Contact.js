@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import '../css/Contact.css';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -9,10 +8,6 @@ import Button from '@mui/material/Button';
 import { useMediaQuery } from '@mui/material';
 
 export default function Contact() {
-
-  useEffect(() => {
-    document.body.style.backgroundColor = '#f2f2f2';
-  }, []);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -37,12 +32,12 @@ export default function Contact() {
     const rows = isExtraSmallScreen ? 8 : isExtraLargeScreen ? 6 : 6; // Default to 6 rows for other sizes
 
   return (
-    <Box component="section" id="contact" sx={{mb: {xs: 20, lg: 5}, pt: {xs: 10, lg: 5}, textAlign: 'center'}}> 
-     <Typography variant="h1" gutterBottom>Contact Me</Typography>
-     <Typography variant="h5" color="textSecondary" component="p" align="center" gutterBottom sx={{ marginBottom: 10, mx: {lg: 0, xs: 20}}}>
+    <Box component="section" id="contact" sx={{backgroundColor: '#ebebeb', pb: {xs: 20, lg: 5}, pt: 15, textAlign: 'center'}}> 
+     <Typography gutterBottom sx={{typography: {xs: 'h2', lg: 'h1'}}}>Contact Me</Typography>
+     <Typography color="textSecondary" component="p" align="center" gutterBottom sx={{ marginBottom: 10, mx: {lg: 0, xs: 4}, typography: {xs: 'h6', lg: 'h5'}}}>
           Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
         </Typography> 
-    <Grid sx={{px: {lg: 45, xs: 10}}}>
+    <Grid sx={{mx: {lg: 45, xs: 2}}}>
       <Card style={{padding: "0 5px 0 5px", margin: "0 auto" }}>
         <CardContent>
           <form name="contact" method="post" data-netlify="true" onSubmit={handleSubmit}>
@@ -58,7 +53,7 @@ export default function Contact() {
                 <TextField name="message" label="Message" multiline rows={rows} placeholder="Type your message here" variant="outlined" fullWidth required inputProps={{maxLength: 1000}}/>
               </Grid>
               <Grid item xs={12}>
-                <Button type="submit" variant="contained" color="primary" fullWidth sx={{fontSize: {xl: 20, xs: 60}}}>Submit</Button>
+                <Button type="submit" variant="contained" color="primary" fullWidth sx={{fontSize: 20}}>Submit</Button>
               </Grid>
             </Grid>
           </form>

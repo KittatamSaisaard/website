@@ -33,12 +33,6 @@ hr{
   pointer-events: none;
 }
 
-.GitHub-logo {
-  height: calc(25px + 10vw);
-  width: auto;
-  pointer-events: none;
-}
-
 .KS_Logo {
   width: 6em;
   height: auto;
@@ -60,10 +54,8 @@ hr{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-left: 5vw;
-  margin-right: 5vw;
   /* margin-top: 6em; */
-  margin-bottom: 3vw;
+  /* margin-bottom: 3vw; */
 }
 
 .Home-header :is(span, p) {
@@ -73,9 +65,9 @@ hr{
   text-align: left;
 }
 
-.Typeit div {
+/* .Typeit div {
   min-width: 350px;
-}
+} */
 
 @media only screen and (max-width: 600px) {
 
@@ -111,12 +103,6 @@ hr{
 
   .GitHub p {
     width: auto !important;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .KS_Logo {
-    margin-left: 1vw;
   }
 }
 
@@ -184,7 +170,6 @@ hr{
   position: absolute;
   width: 100%;
   z-index: 0;
-  min-width: 1000px;
   bottom: 0;
   top: 0;
 }
