@@ -17,6 +17,8 @@ export default function About() {
   // const cSharp = '[![C#](https://custom-icon-badges.demolab.com/badge/C%23-%23239120.svg?logo=cshrp&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/csharp/)';
   // const unity = '[![Unity](https://img.shields.io/badge/Unity-%23000000.svg?logo=unity&logoColor=white)](https://unity.com/)';
 
+  // const skills = [html, css, javascript, react, mui, cSharp, unity, swift];
+
   return (
     <Box component="section" id="about" sx={{textAlign: 'center', backgroundColor: '#f2f2f2', pt: 15, px: {lg: 20, xs: 0}, pb: 6}}>
       <Typography sx={{ typography: {xs: 'h2', lg: 'h1'}}} gutterBottom>About Me</Typography>
