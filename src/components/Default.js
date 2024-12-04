@@ -35,7 +35,7 @@ import Particles from "react-tsparticles";
 // import FadeIn from 'react-fade-in';
 
 const drawerWidth = 150;
-const navItems = ['Home', 'About', /*'Education',*/ 'Projects' /*'Experience',*/, 'Contact'];
+const navItems = ['🏠 Home', '👤 About', /*'Education',*/ '🛠️ Projects' /*'Experience',*/, '✉️ Contact'];
 
 const Copyright = () => {
   return (
@@ -77,17 +77,17 @@ export default function Default(props) {
       <Divider /> */}
       <List>
         {navItems.map((item) => (
-          item !== 'Home' ?
-          <ListItem key={item} component="a" className="drawerItem" href={"#"+item.toLowerCase()} disablePadding>
+          item.substring(3) !== 'Home' ?
+          <ListItem key={item === '🛠️ Projects' ? item.substring(4) : item.substring(3)} component="a" className="drawerItem" href={item === '🛠️ Projects' ? "#"+item.substring(4).toLowerCase() : "#"+item.substring(3).toLowerCase()} disablePadding>
             <ListItemButton>
-              <ListItemText primary={item} primaryTypographyProps={{fontSize: 30}} class='test'/*onClick={() => handleNavigatePage(item)}*//>
+              <ListItemText primary={item} primaryTypographyProps={{fontSize: 21}} class='test'/*onClick={() => handleNavigatePage(item)}*//>
             </ListItemButton>
             <Divider sx={{ borderBottomWidth: 10 }}/>
           </ListItem>
           :
-          <ListItem key={item} component="a" className="drawerItem" disablePadding>
+          <ListItem key={item.substring(3)} component="a" className="drawerItem" disablePadding>
             <ListItemButton>
-              <ListItemText primary={item} primaryTypographyProps={{fontSize: 30}} onClick={() => handleNavigatePage("Home")}/>
+              <ListItemText primary={item} primaryTypographyProps={{fontSize: 21}} onClick={() => handleNavigatePage("Home")}/>
             </ListItemButton>
             <Divider sx={{ borderBottomWidth: 10 }}/>
           </ListItem>
@@ -128,13 +128,13 @@ export default function Default(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'block' }}}>
             {navItems.map((item) => (
-              item === 'Home' ?
-                <Button key={item} sx={{ color: '#fff', fontSize: 20, px: {xl:3, md:1} }} href={"/"}/*onClick={() => handleNavigatePage("Home")}*/>
-                  {item}
+              item.substring(3) === 'Home' ?
+                <Button key={item.substring(3)} sx={{ color: '#fff', fontSize: 20, px: {xl:3, md:1} }} href={"/"}/*onClick={() => handleNavigatePage("Home")}*/>
+                  {item.substring(3)}
                 </Button>
               :
-                <Button key={item} sx={{color: '#fff', fontSize: 20, px: {xl:3, md:1} }} href={"#"+item.toLowerCase()}>
-                  {item}
+                <Button key={item === '🛠️ Projects' ? item.substring(4) : item.substring(3)} sx={{color: '#fff', fontSize: 20, px: {xl:3, md:1} }} href={item === '🛠️ Projects' ? "#"+item.substring(4).toLowerCase() : "#"+item.substring(3).toLowerCase()}>
+                  {item === '🛠️ Projects' ? item.substring(4) : item.substring(3)}
                 </Button>
             ))}
           </Box>
@@ -293,7 +293,7 @@ export default function Default(props) {
               alt="logo"
               src={profile_logo}
               className="Profile-logo"
-              sx={{maxWidth: {xs:400, sm:500, md:400, lg: 1000}, ml: {xs:5}, mt: {xs: 14, xl: 8}, mr: {xs: 2, xl: 0}}}
+              sx={{maxWidth: {xs:400, sm:500, md:400, lg: 1000}, ml: {xs:5}, mt: {xs: 14, xl: 3}, mr: {xs: 2, xl: 0}}}
             />
           </Box>
           <Container maxWidth={false} style={{ padding: '0'}}>
