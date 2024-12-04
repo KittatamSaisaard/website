@@ -12,8 +12,8 @@ export default function About() {
   return (
     <Box component="section" id="about" sx={{textAlign: 'center', backgroundColor: '#f2f2f2', pt: 15, px: {lg: 20, xs: 0}, pb: 6}}>
       <Typography sx={{ typography: {xs: 'h2', lg: 'h1'}}} gutterBottom>About Me</Typography>
-      <Box sx={{display: 'flex', flexDirection: {xs: 'column', lg: 'row'}, alignItems: 'stretch', justifyContent: 'center', gap: 5}}>
-        <Box component="div" className='about' sx={{backgroundColor: '#f7f7f7', m: {lg: 0, xs: 2}, flex: 1, borderRadius: 5}}>
+      <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: 'stretch', justifyContent: 'center', gap: {xs: 2.5, md: 0, lg: 2.5}}}>
+        <Box component="div" className='about' sx={{backgroundColor: '#f7f7f7', m: {lg: 0, xs: 2}, flex: 1, borderRadius: 5, my: '0 !important'}}>
             <Typography variant="body2" id="bio" sx={{ color: 'text.secondary', fontSize: {xs: 15, md: 20}, textAlign: 'center', m: 5}}>
             As a tech enthusiast passionate about solving complex problems, I thrive at the intersection of curiosity and innovation. With experience in software development and emerging technologies, I focus on creating user-centric applications that enhance efficiency and push boundaries. I’m committed to continuous learning, fostering collaboration, and building solutions that make a meaningful impact.
             <br></br><br></br>
@@ -28,7 +28,8 @@ export default function About() {
             borderRadius: 5,
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            my: '0 !important'
           }}
         >
             <Typography sx={{color: '#589ebf', textAlign: 'center', m: 5, fontWeight: 1, fontSize: 35}}>
@@ -38,11 +39,11 @@ export default function About() {
                   sx={{
                     display: 'flex',
                     flexWrap: 'wrap',
-                    maxWidth: '700px',
                     justifyContent: 'center',
                     alignItems: 'center',
                     gap: '7px',
                     margin: '0 auto',
+                    px: 2,
                     pb: 5
                   }}
                 >
