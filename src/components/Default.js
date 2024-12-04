@@ -115,18 +115,24 @@ export default function Default(props) {
       ) : ( */}
         <React.Fragment>
         {/* <FadeIn transitionDuration={2000} delay={250}> */}
-        <AppBar component="nav" style={{ background: '#414245', height: '5.75em', padding: '0'}}>
-        <Toolbar>
-          <Box component="img" src={ks_logo} className="KS_Logo" alt="KS_Logo" onClick={() => handleNavigatePage("Home")}/>
+        <AppBar component="nav" style={{ background: '#414245', padding: '0'}}
+          sx=
+          {{
+            height: {md: '5.75em', xs:'4em'},
+            display: 'flex',
+            justifyContent: 'center'
+          }}>
+        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+          <Box component="img" src={ks_logo} sx={{mr : {md: 2.5}, width: {md: '6em', xs: '4em'}}} className="KS_Logo" alt="KS_Logo" onClick={() => handleNavigatePage("Home")}/>
           <Typography
             variant="h6"
             component="div"
-            sx={{fontSize: {xs:'1.35rem', sm:35}, flexGrow: 1, textAlign: { xs: 'center', md: 'left' }, "&:hover" : {cursor: "pointer"}}}
+            sx={{fontSize: {xs:'1.65rem', sm:40}, flexGrow: 1, textAlign: { xs: 'center', md: 'left' }, "&:hover" : {cursor: "pointer"}}}
             onClick={() => handleNavigatePage("Home")}
           >
             Kittatam Saisaard
           </Typography>
-          <Box sx={{ display: { xs: 'none', md: 'block' }}}>
+          <Box sx={{mr: 4, display: { xs: 'none', md: 'block' }}}>
             {navItems.map((item) => (
               item.substring(3) === 'Home' ?
                 <Button key={item.substring(3)} sx={{ color: '#fff', fontSize: 20, px: {xl:3, md:1} }} href={"/"}/*onClick={() => handleNavigatePage("Home")}*/>
@@ -144,9 +150,9 @@ export default function Default(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { md: 'none' }, m: 1}}
+            sx={{ml: 0, mr: 3, display: { md: 'none' }}}
           >
-            <MenuIcon sx={{fontSize: 70}}/>
+            <MenuIcon sx={{fontSize: 60}}/>
           </IconButton>
         </Toolbar>
       </AppBar>

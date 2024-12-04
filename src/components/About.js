@@ -3,7 +3,6 @@ import '../css/About.css';
 import Box from '@mui/material/Box';
 import linkedIn_logo from "../images/linkedIn_logo.png";
 import Typography from '@mui/material/Typography';
-import ReactMarkdown from 'react-markdown';
 
 export default function About() {
 

@@ -34,10 +34,11 @@ hr{
 }
 
 .KS_Logo {
-  width: 6em;
   height: auto;
   margin: 0.25em;
   margin-right: 0.5em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .KS_Logo:hover {
