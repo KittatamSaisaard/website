@@ -63,7 +63,7 @@ const ImageRenderer = ({ src, alt }) => (
 export default function Projects() {
 
   return (
-    <Box component="section" id="projects" sx={{backgroundColor: '#cccccc', p: 5, pt: 15, px: {lg: '15vw', xs: '0'}}}>
+    <Box component="section" id="projects" sx={{backgroundColor: '#cccccc', p: 5, pt: {xs: 10, md: 15}, px: {lg: '15vw', xs: '0'}}}>
       <Typography gutterBottom sx={{textAlign: 'center', typography: {xs: 'h2', lg: 'h1'}, mb: {lg: 6, xs: 4}}}>Projects</Typography>
       {projectItems.map((project) => (
         <Card sx={{display: {md: 'block', xl: 'flex'}, flexDirection: 'row', m: 2, mb: {sx: 4, md: 8}}}>

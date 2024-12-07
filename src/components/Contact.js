@@ -32,7 +32,7 @@ export default function Contact() {
     const rows = isExtraSmallScreen ? 8 : isExtraLargeScreen ? 6 : 6; // Default to 6 rows for other sizes
 
   return (
-    <Box component="section" id="contact" sx={{backgroundColor: '#ebebeb', pb: {xs: 20, lg: 5}, pt: 15, textAlign: 'center'}}> 
+    <Box component="section" id="contact" sx={{backgroundColor: '#ebebeb', pb: {xs: 20, lg: 5}, pt: {xs: 10, md: 15}, textAlign: 'center'}}> 
      <Typography gutterBottom sx={{typography: {xs: 'h2', lg: 'h1'}}}>Contact Me</Typography>
      <Typography color="textSecondary" component="p" align="center" gutterBottom sx={{ marginBottom: 10, mx: {lg: 0, xs: 4}, typography: {xs: 'h6', lg: 'h5'}}}>
           Feel free to Contact me by submitting the form below and I will get back to you as soon as possible

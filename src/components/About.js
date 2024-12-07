@@ -3,17 +3,20 @@ import '../css/About.css';
 import Box from '@mui/material/Box';
 import linkedIn_logo from "../images/linkedIn_logo.png";
 import Typography from '@mui/material/Typography';
-//import Divider from '@mui/material/Divider';
+import Divider from '@mui/material/Divider';
 
 export default function About() {
 
   const skillsList = ['HTML', 'CSS', 'JavaScript', 'React', 'SASS', 'MUI', 'C#', 'SQL', 'Unity', 'Swift', 'Python', 'C++', 'Terminal', 'OOP & ODD', 'Responsive Design', 'Mobile Development'];
 
   return (
-    <Box component="section" id="about" sx={{textAlign: 'center', backgroundColor: '#f2f2f2', pt: 15, px: {lg: 20, xs: 0}, pb: 6}}>
+    <Box component="section" id="about" sx={{textAlign: 'center', backgroundColor: '#f2f2f2', pt: {xs: 10, md: 15}, px: {lg: 20, xs: 0}, pb: 6}}>
       <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
         <Typography sx={{ typography: {xs: 'h2', lg: 'h1'}}}>About Me</Typography>
         <Divider sx={{height: '5px', background: '#226E93', width: '3rem', borderRadius: '5px', opacity: 1, my: 2}}/>
+        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: {xs: 15, md: 20}, textAlign: 'center', mb: {xs: 5, md:10}, px: 4}}>
+        Here you can learn more about me, what makes me tick and the skills I bring to the table, especially in programming and technology.
+        </Typography>
       </Box>
       <Box sx={{display: 'flex', flexDirection: {xs: 'column', md: 'row'}, alignItems: 'stretch', justifyContent: 'center', gap: {xs: 2.5, md: 0, lg: 2.5}}}>
         <Box component="div" className='about' sx={{backgroundColor: '#f7f7f7', m: {lg: 0, xs: 2}, flex: 1, borderRadius: 5, my: '0 !important'}}>
