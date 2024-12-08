@@ -67,7 +67,7 @@ export default function Projects() {
     <Box component="section" id="projects" sx={{backgroundColor: '#cccccc', p: 5, pt: {xs: 10, md: 15}, px: {lg: '15vw', xs: '0'}}}>
       <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
         <Typography sx={{mb: 1.5, typography: {xs: 'h2', lg: 'h1'}}}>Projects</Typography>
-        <Divider sx={{height: '5px', background: '#226E93', width: '3rem', borderRadius: '5px', opacity: 1, my: 2}}/>
+        <Divider sx={{height: '5px', background: '#226E93', width: '3rem', borderRadius: '5px', opacity: 1, my: 2, mb: 3}}/>
         <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: {xs: 15, md: 20}, textAlign: 'center', mb: {xs: 5, md:10}, px: 4}}>
         Here you can explore a selection of personal projects I've developed, each featuring a GitHub repository and a list of the technologies used.
         </Typography>

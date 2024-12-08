@@ -6,6 +6,7 @@ import {Card, CardContent} from '@mui/material';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useMediaQuery } from '@mui/material';
+import Divider from '@mui/material/Divider';
 
 export default function Contact() {
 
@@ -33,10 +34,16 @@ export default function Contact() {
 
   return (
     <Box component="section" id="contact" sx={{backgroundColor: '#ebebeb', pb: {xs: 20, lg: 5}, pt: {xs: 10, md: 15}, textAlign: 'center'}}> 
-     <Typography gutterBottom sx={{typography: {xs: 'h2', lg: 'h1'}}}>Contact Me</Typography>
-     <Typography color="textSecondary" component="p" align="center" gutterBottom sx={{ marginBottom: 10, mx: {lg: 0, xs: 4}, typography: {xs: 'h6', lg: 'h5'}}}>
-          Feel free to Contact me by submitting the form below and I will get back to you as soon as possible
-        </Typography> 
+     <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+        <Typography sx={{typography: {xs: 'h2', lg: 'h1'}}}>Contact Me</Typography>
+        <Divider sx={{height: '5px', background: '#226E93', width: '3rem', borderRadius: '5px', opacity: 1, my: 2, mb: 3}}/>
+        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: {xs: 15, md: 20}, textAlign: 'center', mb: {xs: 5, md:10}, px: 4}}>
+        Feel free to Contact me by submitting the form below and I will get back to you as soon as possible.
+        </Typography>
+      </Box>
+     {/* <Typography color="textSecondary" component="p" align="center" gutterBottom sx={{ marginBottom: 10, mx: {lg: 0, xs: 4}, typography: {xs: 'h6', lg: 'h5'}}}>
+          
+        </Typography>  */}
     <Grid sx={{mx: {lg: 45, xs: 2}}}>
       <Card style={{padding: "0 5px 0 5px", margin: "0 auto" }} sx={{backgroundColor: '#f7f7f7'}}>
         <CardContent>

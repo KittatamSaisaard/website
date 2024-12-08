@@ -13,7 +13,7 @@ export default function About() {
     <Box component="section" id="about" sx={{textAlign: 'center', backgroundColor: '#f2f2f2', pt: {xs: 10, md: 15}, px: {lg: 20, xs: 0}, pb: 6}}>
       <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
         <Typography sx={{ typography: {xs: 'h2', lg: 'h1'}}}>About Me</Typography>
-        <Divider sx={{height: '5px', background: '#226E93', width: '3rem', borderRadius: '5px', opacity: 1, my: 2}}/>
+        <Divider sx={{height: '5px', background: '#226E93', width: '3rem', borderRadius: '5px', opacity: 1, my: 2, mb: 3}}/>
         <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: {xs: 15, md: 20}, textAlign: 'center', mb: {xs: 5, md:10}, px: 4}}>
         Here you can learn more about me, what makes me tick and the skills I bring to the table, especially in programming and technology.
         </Typography>
