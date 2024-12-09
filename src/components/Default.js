@@ -23,6 +23,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
 
 import About from './About';
 import Projects from './Projects';
@@ -37,12 +38,28 @@ import Particles from "react-tsparticles";
 const drawerWidth = 150;
 const navItems = ['🏠 Home', '👤 About', /*'Education',*/ '🛠️ Projects' /*'Experience',*/, '✉️ Contact'];
 
+  // let navigate = useNavigate(); 
+  const handleNavigatePage = (path) => {
+    // if (path !== 'Home'){
+    //   navigate("../#" + path.toLowerCase(), { replace: true });
+    // } else {
+    //   navigate("../", { replace: true });
+    //   window.scrollTo(0, 0);
+    // }
+
+    if(path === "Home"){
+      document.location.href="/";
+      window.scrollTo(0, 0);
+    }
+};
+
 const Copyright = () => {
   return (
-    <Typography sx={{color:'white', fontSize: 22}}>
-      {'Copyright © Kittatam Saisaard '}
+    <Typography sx={{color:'white', fontSize: {xs: 17, md: 22}}}>
+      {'Copyright © '}
       {new Date().getFullYear()}
-      {'.'}
+      {'. Made by '}
+      <Link color='#FFFFFF' sx={{cursor: 'pointer', fontWeight: 'bold'}} href={"/"}>Kittatam Saisaard</Link>
     </Typography>
   );
 }
@@ -52,21 +69,6 @@ export default function Default(props) {
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
-  };
-
-  // let navigate = useNavigate(); 
-  const handleNavigatePage = (path) => {
-      // if (path !== 'Home'){
-      //   navigate("../#" + path.toLowerCase(), { replace: true });
-      // } else {
-      //   navigate("../", { replace: true });
-      //   window.scrollTo(0, 0);
-      // }
-
-      if(path === "Home"){
-        document.location.href="/";
-        window.scrollTo(0, 0);
-      }
   };
 
   const drawer = (
