@@ -59,7 +59,7 @@ const Copyright = () => {
       {'Copyright © '}
       {new Date().getFullYear()}
       {'. Made by '}
-      <Link color='#FFFFFF' sx={{cursor: 'pointer', fontWeight: 'bold'}} href={"/"}>Kittatam Saisaard</Link>
+      <Link color='#FFFFFF' sx={{cursor: 'pointer', fontWeight: 'bold'}} onClick={() => handleNavigatePage("Home")}>Kittatam Saisaard</Link>
     </Typography>
   );
 }
