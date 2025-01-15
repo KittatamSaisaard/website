@@ -1,7 +1,7 @@
-Kittatam Saisaard's Personal Portfolio Website 🌟
+# Kittatam Saisaard's Personal Portfolio Website 🌟
 Welcome to the source code repository for my personal portfolio website! Built with React and hosted at kittatamsaisaard.com, this website showcases my journey, skills and achievements as a software engineer and developer.
 
-🌐 Features
+# 🌐 Features
 
 📝 About Me
 Get to know me - my background, education, professional experience and the values that drive my work in technology and beyond.
