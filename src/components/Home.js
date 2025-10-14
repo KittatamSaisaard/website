@@ -133,7 +133,7 @@ export default function Home() {
                     .pause(2500)
                     .delete(98, { deleteSpeed: 5, lifeLike: true })
                     .pause(200)
-                    .type("<b>Software Developer</b> 💻", {
+                    .type("<b>Software Engineer</b> 💻", {
                       speed: 40,
                       lifeLike: true,
                     })
