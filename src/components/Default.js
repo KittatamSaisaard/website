@@ -129,7 +129,13 @@ export default function Default(props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{fontSize: {xs:'1.65rem', sm:40}, flexGrow: 1, textAlign: { xs: 'center', md: 'left' }, "&:hover" : {cursor: "pointer"}}}
+            sx={{
+              fontSize: { xs: '1.4rem', sm: 40 },
+              lineHeight: { xs: 1.1, sm: 1.25 },
+              flexGrow: 1,
+              textAlign: { xs: 'center', md: 'left' },
+              "&:hover": { cursor: "pointer" }
+            }}
             onClick={() => handleNavigatePage("Home")}
           >
             Kittatam Saisaard
@@ -173,7 +179,7 @@ export default function Default(props) {
       >
         {drawer}
       </Drawer>
-          <Box component="header" className="Home-header" sx={{mt: {xl: 12, xs: 0}, pb:5 ,position: 'relative', overflow: 'hidden'}}>
+          <Box component="header" className="Home-header" sx={{mt: {xl: 12, xs: 0}, pb:8 ,position: 'relative', overflow: 'hidden'}}>
             <Particles
               className="particles"
               params={{
@@ -279,15 +285,15 @@ export default function Default(props) {
                         lifeLike: true,
                       })
                       .pause(750)
-                      .delete(20, { deleteSpeed: 15, lifeLike: true })
+                      .delete(19, { deleteSpeed: 15, lifeLike: true })
                       .pause(200)
-                      .type("<b>Volunteer</b> 🤚", { speed: 40 })
+                      .type("<b>Volunteer</b> 🤝", { speed: 40 })
                       .pause(750)
                       .delete(11, { deleteSpeed: 15, lifeLike: true })
                       .pause(200)
                       // .type("<b>Night Fill Assistant</b> 🛒", { speed: 40, lifeLike: true })
                       // .pause(2500).delete(22, { deleteSpeed: 15 }).pause(400)
-                      .type("<b>Speedcuber</b> 🧩", { speed: 40, lifeLike: true })
+                      .type("<b>Speedcuber</b> 🧊", { speed: 40, lifeLike: true })
                       .pause(750)
                       .delete(null, { deleteSpeed: 15 })
                       .pause(200);
